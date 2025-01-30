@@ -1,0 +1,90 @@
+/* Importando una fuente personalizada de Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+body{
+  background: linear-gradient(to bottom right, #293842, #4797c9);
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /*NO TOCAR*/
+}
+
+
+.card {
+  color: white;
+  text-align: center;
+  font-family: "Poppins";
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.33);
+}
+  
+.card-background {
+    
+}
+  
+.card-content {
+  background: linear-gradient(to right, #cb2591, #1edee8);
+  border-radius: 15px;
+  padding: 1em;
+  width: 400px;
+  height: 215px;
+}
+  
+.name {
+  text-shadow: 2px 2px 4px #00000035 ;
+}
+  
+.description {
+  margin-bottom: 30px;
+}
+  
+.contact-btn {
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 1em;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 2em;
+  font-weight: bold;
+}
+  
+.contact-btn:hover {
+  background-color: rgba(255, 255, 255, 0.50);
+}
+  
+  
+
+.floating-element {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffeb3b, #ff5722);
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 10;
+  margin: 10px;
+  animation: move 3s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}

@@ -1,0 +1,48 @@
+<Prueba>
+    <manga tipo="Shonen" fechaLanzamiento="22/07/1997">
+        <nombre>One Piece</nombre>
+        <nombreAutor>Eiichirō Oda</nombreAutor>
+        <númeroCapitulos>1092</númeroCapitulos>
+        <precio>20€</precio>
+    </manga>
+
+    <ordenador marca="Asus" fechaCreación="01/04/1976">
+        <modelo>Zenbook S14</modelo>
+        <color>Negro</color>
+        <sistemaOperativo>Windows 11 Home</sistemaOperativo>
+        <almacenamiento tipo="Intel">1TB</almacenamiento>
+        <peso>1.20Kg</peso>
+    </ordenador>
+
+    <pelicula titulo="The Hangover" genero="Comedia/Aventura">
+        <duracion>1 Hora 40 Minutos</duracion>
+        <direccion>Todd Phillips</direccion>
+        <musica>Christophe Beck</musica>
+        <fotografia>Lawrence Sher</fotografia>
+        <montaje>Debra Neil-Fisher</montaje>
+    </pelicula>
+
+    <gafas marca="Ray-Ban" nombre="PREDATOR 2">
+        <modelo>RB2027 601/W1 62-19</modelo>
+        <color>Negro y Gris</color>
+        <precio>220€</precio>
+        <ajuste>De Puente Alto</ajuste>
+    </gafas>
+
+    <videojuego nombre="The Last of Us Part II" desarrollador="Naughty Dog">
+        <director>Neil Druckmann</director>
+        <genero>Terror / Aventura</genero>
+        <modoDeJuego>Un jugador</modoDeJuego>
+        <version>2021</version>
+        <plataformas>PlayStation 4 y PlayStation 5</plataformas>
+    </videojuego>
+
+    <anime tipo="Shonen" fechaLanzamiento="15/02/2007">
+        <nombre>Naruto</nombre>
+        <nombreAutor>Masashi Kishimoto</nombreAutor>
+        <númeroCapitulos>220</númeroCapitulos>
+        <duracion>23 Minutos</duracion>
+        <genero>Acción, artes marciales, aventura y fantasía</genero>
+        <estudio>Pierrot</estudio>
+    </anime>
+</Prueba>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>FORMULARIO DE PRUEBA</h1>
+    </header>
+
+    <main>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required/> <br>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" required/> <br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" min="0" max="110" required/> <br>
+
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento" required/> <br>
+
+            <label for="colorFavorito">Color favorito:</label>
+            <input type="color" id="colorFavorito" required/> <br>
+
+            <label for="sobreTi">Escribe algo sobre ti:</label>
+            <textarea id="sobreTi" name="sobre ti"></textarea> <br>
+
+            <label for="provincias">Selecciona de qué provincia de Andalucía eres:</label>
+            <select name="provincias" id="provincias" required>
+                <option disabled value="Elija la provincia" selected>Elija su provincia</option>
+                <option value="Córdoba">Córdoba</option>
+                <option value="Sevilla">Sevilla</option>
+                <option value="Málaga">Málaga</option>
+                <option value="Cadíz">Cadíz</option>
+                <option value="Huelva">Huelva</option>
+                <option value="Granada">Granada</option>
+                <option value="Almería">Almería</option>
+                <option value="Jaén">Jaén</option>
+            </select> <br>
+
+            <label for="telefono">Tu teléfono:</label>
+            <input type="number" id="telefono" required/> <br>
+
+            <label for="mesFav">Mes favorito del año:</label>
+            <select name="mesFav" id="mesFav" required>
+                <option disabled value="Elija su mes favorito" selected>Elija su mes favorito</option>
+                <option value="Enero">Enero</option>
+                <option value="Febrero">Febrero</option>
+                <option value="Marzo">Marzo</option>
+                <option value="Abril">Abril</option>
+                <option value="Mayo">Mayo</option>
+                <option value="Junio">Junio</option>
+                <option value="Julio">Julio</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Septiembre">Septiembre</option>
+                <option value="Octubre">Octubre</option>
+                <option value="Noviembre">Noviembre</option>
+                <option value="Diciembre">Diciembre</option> 
+            </select> <br>
+
+            <label for="sexo">Sexo:</label>
+            <select name="Sexo" id="sexo" required>
+                <option disabled value="Elija su sexo" selected>Elija su sexo</option>
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+                <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                <option value="Otro">Otro</option>
+            </select> <br>
+
+            <label for="email">Dirección email:</label>
+            <input type="email" id="email" required/> <br>
+
+            <label for="imagen">Sube una imagen:</label>
+            <input type="file" id="imagen" accept="imagen" required/> <br>
+
+            <label for="progreso">¿Cuál es tu progreso en HTML?</label>
+            <input type="range" name="progreso" id="progreso" required> <br>
+
+            <label for="comida">Haz una lista de comidas y checkea tus favoritas:</label>
+            <select name="comida" id="comida" multiple required>
+                <option value="Elija sus comidas" disabled>Elija sus comidas</option>
+                <option value="Queso">Queso</option>
+                <option value="Atún">Atún</option>
+                <option value="Tomate">Tomate</option>
+                <option value="Fresa">Fresa</option>
+                <option value="Tofú">Tofú</option>
+                <option value="Pollo">Pollo</option>
+                <option value="Ternera">Ternera</option>
+            </select> <br>
+
+            <label for="hobbies">Selecciona tus hobbies:</label>
+            <select name="hobbies" id="hobbies" multiple required>
+                <option value="Elija sus hobbies" disabled>Elija sus hobbies</option>
+                <option value="Escuchar música">Escuchar música</option>
+                <option value="Leer">Leer</option>
+                <option value="Fotografía">Fotografía</option>
+                <option value="Cocinar">Cocinar</option>
+                <option value="Fumar">Fumar</option>
+            </select> <br>
+
+            <label for="reset">Botón de reset:</label>
+            <input type="reset" id="reset" value="reset"> <br>
+
+            <label for="submit">Botón de enviar:</label>
+            <input type="submit" id="submit" value="submit"> <br>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+</html>

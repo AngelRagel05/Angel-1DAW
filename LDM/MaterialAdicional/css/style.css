@@ -1,0 +1,90 @@
+* {
+    margin: 0px;
+}
+
+header {
+    text-align: center;
+    background-color: transparent;
+}
+
+header h1 {
+    padding: 50px 150px 25px;
+}
+
+header h3 {
+    padding: 25px 150px 50px;
+}
+
+body {
+    background-position: center; /* CENTRA LA IMAGEN */
+    background-attachment: fixed; /* FIJA LA IMAGEN Y SE QUEDA QUIETA */
+}
+
+main {
+    background-image: url('../img/bg.png');
+}
+
+nav {
+    background-color: #000;
+    text-align: center; /* CENTRO EL TEXTO DE LOS ENLACES */
+    padding: 25px 0; /* ESPACIO ARRIBA Y ABAJO */
+}
+
+nav ul {
+    display: inline-flex; /* MOSTRAR ELEMENTOS EN LINEA */
+}
+
+nav ul li {
+    margin: 0 20px; /* ESPACIO ENTRE ELEMENTOS */
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 8px;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+.segundo {
+    background-color: #d3d3d3;
+}
+
+.primero {
+    background-color: rgb(220, 220, 5);
+}
+
+.tercero {
+    background-color: #b5651d;
+    color: white;
+}
+
+footer {
+    background-color: black;
+    padding: 15px;                  /* ME CREA ESPACIO NEGRO */
+    justify-content: center;        /* ME PONE TODO EN EL CENTRO HORIZONTALMENTE */
+    align-items: center;            /* ME PONE TODO EN EL CENTRO VERTICALMENTE */
+    display: flex;                  /* CENTRA DEL TO' */
+}
+
+#fuente {
+    color: white;
+}
+
+#wiki {
+    color: red;
+}
+
+#fuente, #wiki {
+    display: inline;                /* ME PONE TODO EN LA MISMA LINEA */
+    letter-spacing: 15px;           /* ME SEPARA LAS LETRAS ENTRE ELLAS */
+    margin: 0 15px;                 /* ME SEPARA LOS PARRAFOS */
+}

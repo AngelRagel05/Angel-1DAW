@@ -1,0 +1,185 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EBEBFF;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px; 
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.wrapper {
+    width: 960px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    position: relative;
+    background: linear-gradient(to right, #94BDD6, #EBF7FF);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-image: url('../IMAGE/cabecera.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+header h1 {
+    font-size: 36px;
+    text-shadow: 4px 1px 5px #000000;
+    padding: 20px 40px; 
+    border-radius: 5px;
+    color: #fff;
+}
+
+#BlockNews {
+    background: linear-gradient(to bottom, #94BDD6, #EBF7FF);
+    margin: 40px 60px; 
+    padding: 40px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    float: left;
+    background-color: #ffffff;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border-right: 1px solid #94BDD6; 
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0; 
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #000000; 
+    font-weight: bold;
+    padding: 5px;
+    display: block;
+    border-radius: 5px; 
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: none;
+    background-color: #94BDD6; 
+    color: #333;
+}
+
+/* Main content */
+main {
+    margin-left: 220px;
+    padding: 30px; 
+    box-sizing: border-box;
+}
+
+main .intro {
+    margin-bottom: 20px;
+}
+
+main h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.image-container img {
+    width: 60%; 
+    object-fit: cover;
+    border-radius: 50%; 
+    display: block;
+    margin: 50px auto 10px; 
+}
+
+.image-container h3 {
+    text-align: center;
+    color: #000000; 
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.image-container p {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.izquierda, .derecha {
+    width: 45%; 
+    text-align: right; 
+}
+
+.derecha {
+    text-align: left; 
+}
+
+
+.division {
+    width: 1px; 
+    background-color: white; 
+    height: 85px; 
+    margin: 0 20px; 
+}
+
+.header-blue {
+    background-color: #9EC4DB;
+    padding: 10px 0; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    box-sizing: border-box; 
+    border-top-left-radius: 15px; 
+    border-top-right-radius: 15px; 
+}
+.header-blue h3 {
+    margin: -10px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #94BDD6; 
+    color: white;
+    font-size: 12px;
+    border-top: 2px solid #94BDD6; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+}

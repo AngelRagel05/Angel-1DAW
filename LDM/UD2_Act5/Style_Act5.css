@@ -1,0 +1,28 @@
+
+
+body {
+    background-color: hwb(293 86% 0%);
+    justify-content: center;    
+    align-items: center;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parrafo{
+    display: block;
+    font-size: xx-large;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#parr2{
+width: 100%;
+    margin-top: 10px;
+    display: inline-table;
+    border: 2px solid black;
+}
+
+
+

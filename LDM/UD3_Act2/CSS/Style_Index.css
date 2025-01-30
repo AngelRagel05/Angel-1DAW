@@ -1,0 +1,220 @@
+body {
+    font-family: 'Arvo', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    box-shadow: 0 7px 15px rgba(1, 1, 1, 1);
+}
+
+.wrapper {
+    width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    overflow: hidden;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    position: relative;
+    background: linear-gradient(to right, #94BDD6, #EBF7FF);
+    text-align: center;
+    box-shadow: 0 7px 15px rgba(0, 0.3, 0.5, 0);
+    background-image: url('../IMAGE/cabecera.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 34px;
+    text-shadow: 4px 1px 5px #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.sidebar {
+    width: 200px;
+    float: left;
+    background-color: #ffffff;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border-right: 1px solid #94BDD6;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #1f1e1e;
+    font-weight: bold;
+    padding: 5px;
+    display: block;
+    border-radius: 5px;
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: none;
+    background-color: #94BDD6;
+    color: #333;
+}
+
+main {
+    margin-left: 220px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+main .intro {
+    margin-bottom: 20px;
+}
+
+main h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0.5, 0.3);
+    position: relative;
+}
+
+.image-container img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 50px auto 10px;
+}
+
+.image-container h3 {
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.image-container p {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #94BDD6;
+    color: white;
+    font-size: 12px;
+    border-top: 2px solid #94BDD6;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 7px 15px rgba(0, 0, 0.5, 0.3);
+}
+
+.Periodicos{
+    padding: 15px;
+    background: #94BDD6;
+    border-bottom: 0px;
+}
+
+.Espacio{
+    box-shadow: 0 7px 15px rgba(0, 0, 0.5, 0.3);
+    padding: 30px;
+}
+
+.Comillas{
+    color: #9EC4DB;
+    margin: 50px;
+    padding: 15px;
+    background: #EBF7FF;
+}
+
+.Nombres{
+    text-align: right;
+}
+
+.izquierda, .derecha {
+    width: 45%;
+    text-align: right;
+}
+
+.derecha {
+    text-align: left;
+}
+
+.division {
+    width: 1px;
+    background-color: white;
+    height: 85px;
+    margin: 0 20px;
+}
+
+.header-blue {
+    background-color: #9EC4DB;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.header-blue h3 {
+    margin: -10px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.container hr{
+    color:#94BDD6;
+}
+
+#subheader {
+    margin-top: 40px;
+    height: auto;
+    background: linear-gradient(to bottom, #94BDD6, #EBF7FF);
+    text-align: center;
+    padding: 70px;
+    font-size: 20px;
+    margin-left: 300px;
+    margin-right: 100px;
+}
+
+#subheader h1 {
+    font-size: 38px;
+    color: #000000;
+    margin: 0;
+}

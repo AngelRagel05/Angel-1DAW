@@ -1,0 +1,64 @@
+* {
+    margin: 0px;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    background-image: linear-gradient(rgb(138, 224, 235), white);
+    padding: 25px;
+}
+
+h1 {
+    align-content: center;
+    padding: 20px;
+}
+
+.caja {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    align-content: center;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.caja1 {
+    background-color: rgb(237, 47, 48);
+}
+
+.caja2 {
+    background-color: rgb(82, 180, 119);
+}
+
+.caja3 {
+    background-image: linear-gradient(to right, rgb(255, 151, 0), rgb(255, 87, 35))
+}
+
+.caja4 {
+    background-image: radial-gradient(rgb(6, 16, 93) 10%, rgb(0, 226, 255) 80%)
+}
+
+.caja5 {
+    background-image: linear-gradient(to right, rgb(106, 241, 183), rgb(1, 202, 255), rgb(0, 6, 254));
+}
+
+.caja6 {
+    background-image: linear-gradient(to right bottom, rgb(239, 53, 144), rgb(60, 145, 212));
+}
+
+.caja7 {
+    background-image: radial-gradient(circle, rgb(255, 254, 251), rgb(243, 198, 105), rgb(15, 188, 248));
+}
+
+.caja8 {
+    background-image: radial-gradient(at 0% 100%, rgb(241, 85, 70), rgb(253, 234, 60), rgb(43, 155, 233));
+}
+
+.caja9 {
+    background-image: conic-gradient(red, yellow, green, purple, white);
+}
