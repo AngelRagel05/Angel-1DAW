@@ -8,23 +8,23 @@ body {
 }
 
 .titulo {
-    margin: 20px 10px 20px;
-
+    margin: 20px 10px 10px;
 }
 
 .perfil {
     border: 1px solid black;
     margin: 10px;
-    
     width: 250px;
     height: 150px;
     overflow: auto;
 }
 
 .descripcion {
-    width: 850px;
+    margin: 10px 5px 20px;
+    width: 880px;
     text-decoration: underline;
     word-spacing: 5px;
+    text-transform: capitalize;
 }
 
 .detalles {
