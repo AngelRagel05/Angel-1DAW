@@ -10,7 +10,7 @@
 }
 
 body{
-
+  background: linear-gradient(to bottom right, #293842, #4797c9);
 
 }
 
@@ -25,32 +25,46 @@ body{
 
 
 .card {
+  color: white;
+  text-align: center;
+  font-family: "Poppins";
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.33);
+}
+  
+.card-background {
     
-  }
+}
   
-  .card-background {
-    
-  }
+.card-content {
+  background: linear-gradient(to right, #cb2591, #1edee8);
+  border-radius: 15px;
+  padding: 1em;
+  width: 400px;
+  height: 215px;
+}
   
-  .card-content {
-   
-  }
+.name {
+  text-shadow: 2px 2px 4px #00000035 ;
+}
   
-  .name {
-    
-  }
+.description {
+  margin-bottom: 30px;
+}
   
-  .description {
-    
-  }
+.contact-btn {
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 1em;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 2em;
+  font-weight: bold;
+}
   
-  .contact-btn {
-   
-  }
-  
-  .contact-btn:hover {
-   
-  }
+.contact-btn:hover {
+  background-color: rgba(255, 255, 255, 0.50);
+}
   
   
 
