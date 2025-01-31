@@ -4,34 +4,44 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    width: 850px;
+   
 }
 
 .titulo {
-    text-align: center;
-    
-    background-image: linear-gradient(to right, #ea6c91, #3a55ac);
+    background: linear-gradient(to right, #ea6c91, #3a55ac);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.contenedor { 
+.contenedor {
+    font-size: x-large;
     margin: 10px;
     border: 10px solid;
-    border-image-source: linear-gradient(45deg, #ea6c91, #36e6e8);
+    border-image-source: linear-gradient(45deg, #ea6c91, #ffb280, #84aae8, #36e6e8);
     border-image-slice: 1;
 }
 
 p {
     text-align: center;
+    margin: 40px 40px 40px;
+}
+
+img {
+    margin: 20px 25px 20px;
+    width: 300px;
+    border-radius: 10px;
 }
 
 .imagen-flotante {
     float: left;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 .imagen-flotante-derecha {
     float: right;
     transform: scaleX(-1);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 .clearfix {
