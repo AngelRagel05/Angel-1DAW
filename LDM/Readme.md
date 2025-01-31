@@ -6,7 +6,7 @@
 Aquí encontrarás prácticas, proyectos y experimentos con diferentes tecnologías. La idea es ir mejorando con el tiempo y documentar mi progreso.
 
 ## Contenido
-- **📂 [LDM/UD1_Act1](LDM/UD1_Act1/PruebaXML.xml)** - Prueba con XML.
+- **📂 [../LDM/UD1_Act1](LDM/UD1_Act1/PruebaXML.xml)** - Prueba con XML.
 - **📂 [LDM/UD2_Act1](LDM/UD2_Act1/Index.html)** - Primer archivo HTML.
 - **📂 [LDM/UD2_Act2](LDM/UD2_Act2/Angel_actividad2.html)** - Creación de una página web simple.
 - **📂 [LDM/UD2_Act3](LDM/UD2_Act3/Horario.html)** - Creación del horario del curso (listas y tablas).
