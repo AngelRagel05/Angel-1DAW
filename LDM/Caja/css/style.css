@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
 }
 
@@ -8,19 +8,27 @@ body {
 }
 
 .titulo {
-    margin: 20px;
-    
+    margin: 20px 10px 20px;
+
 }
 
 .perfil {
     border: 1px solid black;
     margin: 10px;
     
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 150px;
+    overflow: auto;
+}
 
-    overflow-y: scroll;
-    overflow-x: scroll;
+.descripcion {
+    width: 850px;
+    text-decoration: underline;
+    word-spacing: 5px;
+}
+
+.detalles {
+    width: 850px;
 }
 
 a {
@@ -32,6 +40,6 @@ a:hover {
     color: yellow;
 }
 
-a:visited{
+a:visited {
     color: purple;
 }
