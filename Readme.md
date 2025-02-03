@@ -5,10 +5,10 @@ Este es mi espacio en GitHub donde iré subiendo todos mis trabajos y proyectos 
 
 ## Contenido
 
-### 📌 [LMD (Lenguajes de Marca)](LMD/README.md)
+### 📌 [LMD (Lenguajes de Marca)](../LMD/README.md)
 Repositorio con prácticas y proyectos relacionados con HTML, CSS y XML.
 
-### 📌 [EEDD (Entornos de Desarrollo)](EEDD/README.md)
+### 📌 [EEDD (Entornos de Desarrollo)](../EEDD/README.md)
 Repositorio con prácticas y proyectos relacionados con herramientas y configuraciones para el desarrollo de software.
 
 ### 📌 Otras categorías (Próximamente)
