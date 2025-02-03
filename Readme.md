@@ -5,10 +5,10 @@ Este es mi espacio en GitHub donde iré subiendo todos mis trabajos y proyectos 
 
 ## Contenido
 
-### 📌 [LMD (Lenguajes de Marca)]([../LMD](https://github.com/AngelRagel05/Angel-1DAW/tree/master/LDM))
+### 📌 [LMD (Lenguajes de Marca)](https://github.com/AngelRagel05/Angel-1DAW/LDM))
 Repositorio con prácticas y proyectos relacionados con HTML, CSS y XML.
 
-### 📌 [EEDD (Entornos de Desarrollo)]([../EEDD](https://github.com/AngelRagel05/Angel-1DAW/tree/master/EEDD))
+### 📌 [EEDD (Entornos de Desarrollo)](https://github.com/AngelRagel05/Angel-1DAW/EEDD))
 Repositorio con prácticas y proyectos relacionados con herramientas y configuraciones para el desarrollo de software.
 
 ### 📌 Otras categorías (Próximamente)
