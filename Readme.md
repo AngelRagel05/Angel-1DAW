@@ -5,10 +5,10 @@ Este es mi espacio en GitHub donde iré subiendo todos mis trabajos y proyectos 
 
 ## Contenido
 
-### 📌 [LDM (Lenguajes de Marca)](.../LDM)
+### 📌 [LDM (Lenguajes de Marca)](/LDM)
 Repositorio con prácticas y proyectos relacionados con HTML, CSS y XML.
 
-### 📌 [EEDD (Entornos de Desarrollo)](.../EEDD)
+### 📌 [EEDD (Entornos de Desarrollo)](/EEDD)
 Repositorio con prácticas y proyectos relacionados con herramientas y configuraciones para el desarrollo de software.
 
 ### 📌 Otras categorías (Próximamente)
