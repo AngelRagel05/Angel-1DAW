@@ -3,7 +3,7 @@
 ## Sobre este repositorio
 ¡Bienvenido! 👋 Soy Ángel Jiménez Ragel y este repositorio será mi espacio para ir subiendo todos los trabajos que vaya realizando a lo largo de mi aprendizaje en desarrollo web y programación.
 
-Aquí encontrarás prácticas, proyectos y experimentos con diferentes tecnologías. La idea es ir mejorando con el tiempo y documentar mi progreso.
+Aquí encontrarás prácticas, proyectos realizados en la asignatura Lenguajes de Marca. La idea es ir mejorando con el tiempo y documentar mi progreso.
 
 ## Contenido
 - **📂 [Prueba con XML](../LDM/UD1_Act1/PruebaXML.xml)**
