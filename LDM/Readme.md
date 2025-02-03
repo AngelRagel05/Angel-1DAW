@@ -1,7 +1,7 @@
 # Mi Portafolio de Proyectos
 
 ## Sobre este repositorio
-¡Bienvenido! 👋 Soy un estudiante y este repositorio será mi espacio para ir subiendo todos los trabajos que vaya realizando a lo largo de mi aprendizaje en desarrollo web y programación.
+¡Bienvenido! 👋 Soy Ángel Jiménez Ragel y este repositorio será mi espacio para ir subiendo todos los trabajos que vaya realizando a lo largo de mi aprendizaje en desarrollo web y programación.
 
 Aquí encontrarás prácticas, proyectos y experimentos con diferentes tecnologías. La idea es ir mejorando con el tiempo y documentar mi progreso.
 
