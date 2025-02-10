@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: gold;
+    
+}
+
+main {
+    background-color: aqua;
+
+}
+
+aside {
+    background-color: blueviolet;
+
+}
+
+footer {
+    background-color: lawngreen;
+
+}
+

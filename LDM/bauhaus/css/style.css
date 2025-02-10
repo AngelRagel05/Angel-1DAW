@@ -1,0 +1,93 @@
+* {
+    --primary-color: pink;
+    --bg-amarillo: rgb(231, 198, 14);
+    --bg-rojo: rgb(231, 10, 10);
+    --bg-azul: rgb(7, 7, 225);
+    --bg-negro: rgb(20, 19, 19);
+    --bg-blanco: rgb(255, 255, 255);
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1em;
+    background-color: var(--bg-negro);
+}
+
+div {
+    display: flex;
+    border: 1px solid var(--bg-negro);
+    padding: 25px;
+}
+
+#rojo1 {
+    background-color: var(--bg-rojo);
+}
+
+#rojo2 {
+    background-color: var(--bg-rojo);
+}
+
+#azul1 {
+    background-color: var(--bg-azul);
+}
+
+#amarillo1 {
+    background-color: var(--bg-amarillo);
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: bolder;
+    text-align: center;
+    padding: 0.5em 0em;
+    margin: 1em;
+}
+
+p {
+    text-align: center;
+}
+
+#bauhaus {
+    background-color: var(--bg-blanco);
+}
+
+#blanco {
+    background-color: var(--bg-blanco);
+}
+
+#azul2 {
+    background-color: var(--bg-azul);
+}
+
+#amarillo2 {
+    background-color: var(--bg-amarillo);
+}
+
+#contenedor {
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        
+
+
+    }
+
+
+    
+}
+
+#contenedor {
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+    }
+
+
+    
+}
