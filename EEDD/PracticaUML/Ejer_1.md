@@ -20,31 +20,9 @@
             - String: grupo
         }
 
-        Persona <|-- Profesor
-        Persona <|-- Alumno
-        Profesor <|-- Tutor
+    Persona <|-- Profesor
+    Persona <|-- Alumno
+    Profesor <|-- Tutor
+
+    Profesor "1" --> "1..*" Alumno: Enseña
 ```
-
-```mermaid
-    classDiagram
-
-    enum Genero {
-        DRAMA
-        COMEDIA
-        ACCION
-        TERROR
-        ROMANCE
-        AVENTURA
-        SCIFI
-    }
-
-    class Pelicula {
-        # String: titulo
-        # String: Sinopsis
-        # int: anio
-        # genero: Genero 
-    }
-
-    class Persona {
-        - 
-    }
