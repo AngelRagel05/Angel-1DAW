@@ -5,7 +5,6 @@
     --bg-azul: rgb(7, 7, 225);
     --bg-negro: rgb(20, 19, 19);
     --bg-blanco: rgb(255, 255, 255);
-    --me-alturaDiv: 1em;
 }
 
 body {
@@ -98,6 +97,7 @@ p {
 
     #rojo1 {
         grid-area: rojo1;
+        margin-top: 1em;
     }
 
     #amarillo1 {
@@ -106,14 +106,14 @@ p {
 
     #rojo2 {
         grid-area: rojo2;
-        height: 31em;
+        margin-top: 1em;
     }
 }
 
 @media screen and (min-width: 1024px) {
 #contenedor {
         grid-template-columns: 9em 25% 1fr 1fr 1fr;
-        grid-template-rows: 70px 30px 3fr 70px;
+        grid-template-rows: 95px 30px 3fr 70px;
         grid-template-areas:
         "rojo1 rojo2 azul1 azul1 azul1"
         "rojo1 rojo2 bauhaus bauhaus bauhaus"
@@ -133,8 +133,11 @@ p {
         margin-bottom: 1em;
     }
 
+    #azul1 {
+        margin-top: 1em;
+    }
+
     #rojo2 {
         margin-right: 1em;
-        height: auto;
     }
 }
