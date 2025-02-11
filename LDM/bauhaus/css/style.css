@@ -5,11 +5,13 @@
     --bg-azul: rgb(7, 7, 225);
     --bg-negro: rgb(20, 19, 19);
     --bg-blanco: rgb(255, 255, 255);
+    --me-alturaDiv: 1em;
 }
 
 body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-negro);
 }
 
 #contenedor {
@@ -33,13 +35,13 @@ div {
 }
 
 #rojo1 {
-    height: 1em;
+    
     grid-area: rojo1;
     background-color: var(--bg-rojo);
 }
 
 #rojo2 {
-    height: 1em;
+    
     grid-area: rojo2;
     background-color: var(--bg-rojo);
 }
@@ -51,7 +53,7 @@ div {
 }
 
 #amarillo1 {
-    height: 1em;
+    
     grid-area: amarillo1;
     background-color: var(--bg-amarillo);
 }
@@ -65,26 +67,24 @@ h1 {
 p {
     text-align: center;
 }
+
 #bauhaus {
-    
     grid-area: bauhaus;
     background-color: var(--bg-blanco);
 }
 
 #blanco {
-    height: 1em;
     grid-area: blanco;
     background-color: var(--bg-blanco);
 }
 
 #azul2 {
-    height: 1em;
     grid-area: azul2;
     background-color: var(--bg-azul);
 }
 
 #amarillo2 {
-    height: 1em;
+    
     grid-area: amarillo2;
     background-color: var(--bg-amarillo);
 }
@@ -92,25 +92,27 @@ p {
 @media screen and (min-width: 768px) {
     #contenedor {
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 70px 600px 70px 100px 1fr;
         grid-template-areas: 
         "azul1 azul1 azul1"
         "bauhaus bauhaus bauhaus"
         "blanco azul2 amarillo2"
         "rojo1 rojo2 rojo2"
-        "amarillo1 rojo2 rojo2"
         "amarillo1 rojo2 rojo2";
 
     }
 
     #rojo1 {
-        height: 3em;
+        grid-area: rojo1;
     }
 
     #amarillo1 {
-        height: 24em;
+        grid-area: amarillo1;
+        
     }
 
     #rojo2 {
+        grid-area: rojo2;
         height: 31em;
     }
 
@@ -119,11 +121,10 @@ p {
 @media screen and (min-width: 1024px) {
 #contenedor {
         grid-template-columns: 9em 25% 1fr 1fr 1fr;
-        grid-template-areas: 
+        grid-template-rows: 70px 30px 3fr 70px;
+        grid-template-areas:
         "rojo1 rojo2 azul1 azul1 azul1"
-        "amarillo1 rojo2 bauhaus bauhaus bauhaus"
-        "amarillo1 rojo2 bauhaus bauhaus bauhaus"
-        "amarillo1 rojo2 bauhaus bauhaus bauhaus"
+        "rojo1 rojo2 bauhaus bauhaus bauhaus"
         "amarillo1 rojo2 bauhaus bauhaus bauhaus"
         "amarillo1 rojo2 blanco azul2 amarillo2";
     }
@@ -137,19 +138,11 @@ p {
         text-align: right;
         margin-left: 1em;
         margin-right: 1em;
-    }
-
-    #amarillo1 {
-        height: 91.9%;
+        margin-bottom: 1em;
     }
 
     #rojo2 {
-        height: 93.25%;
         margin-right: 1em;
+        height: auto;
     }
-
-    #azul1 {
-        margin: 0px;   
-    }
-    
 }
