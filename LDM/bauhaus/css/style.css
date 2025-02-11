@@ -35,25 +35,21 @@ div {
 }
 
 #rojo1 {
-    
     grid-area: rojo1;
     background-color: var(--bg-rojo);
 }
 
 #rojo2 {
-    
     grid-area: rojo2;
     background-color: var(--bg-rojo);
 }
 
 #azul1 {
-   
     grid-area: azul1;
     background-color: var(--bg-azul);
 }
 
 #amarillo1 {
-    
     grid-area: amarillo1;
     background-color: var(--bg-amarillo);
 }
@@ -84,7 +80,6 @@ p {
 }
 
 #amarillo2 {
-    
     grid-area: amarillo2;
     background-color: var(--bg-amarillo);
 }
@@ -99,7 +94,6 @@ p {
         "blanco azul2 amarillo2"
         "rojo1 rojo2 rojo2"
         "amarillo1 rojo2 rojo2";
-
     }
 
     #rojo1 {
@@ -108,14 +102,12 @@ p {
 
     #amarillo1 {
         grid-area: amarillo1;
-        
     }
 
     #rojo2 {
         grid-area: rojo2;
         height: 31em;
     }
-
 }
 
 @media screen and (min-width: 1024px) {
