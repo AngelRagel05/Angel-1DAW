@@ -39,30 +39,51 @@ header {
 }
 
 main {
+    margin: 0em 1em 0em 0em;
     grid-area: main;
+    
+    p {
+        margin: 1em 1.5em 1em 0em;
+        font-size: 14px;
+        text-align: justify;
+    }
 }
 
 .contenedor {
-    margin: 1em 0em 0em 2em;
+    margin: 0em 0em 0em 2em;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: 
     "header header"
     "main aside"
     "footer footer";
-    gap: 50px;
+    gap: 1em;
 }
 
 .sobreAutor {
-    padding: 2em;
+    padding: 0.5em 0em 0em 2em;
     background-color: white;
+
+    h2 {
+        padding: 1em 0em 0em 0em;
+    }
 
     h3 {
         padding: 1em 0em 0em 0em;
     }
+}
 
-    h4 {
-        padding: 1em 0em 0em 0em;
+figure {
+    float: right;
+    width: 25%;
+    margin: 1em 1.5em 1em 2em;
+
+    figcaption {
+        font-size: 14px;
+    }
+
+    img {
+        width: 85%;
     }
 }
 
@@ -71,12 +92,96 @@ main {
     padding: 4em;
 }
 
+.clear {
+    clear: both;
+}
 
+.cita {
+    text-align: center;
+    color: white;
+    cite{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    p {
+        margin-top: 2.5em;
+        text-align: center;
+    }
+
+    .comillas {
+        font-size: xx-large;
+        color: #e14040;
+    }
+}
+
+.agrupaciones {
+    background-color: white;
+
+    h2 {
+        padding: 1.5em 0em 1em 2em;
+    }
+    
+    table {
+        border: white solid 1px;
+
+        margin: auto;
+        padding: 1em;
+
+        thead {
+            text-align: left;
+            color: white;
+            background-color: black;
+        }
+
+        th {
+            padding: 0.8em;
+        }
+
+        td {
+            padding: 0.8em;
+        }
+
+        .primero {
+            background-color: #e2d816;
+        }
+
+        .segundo {
+            background-color: #c0bdb8;
+        }
+
+        .tercero {
+            background-color: #c07732;
+        }
+    }
+    
+
+}
 
 aside {
     grid-area: aside;
+
+    img {
+        width: 75%;
+    }
 }
 
 footer {
     grid-area: footer;
+}
+
+@media screen and (min-width: 1024px) {
+
+    main {
+        margin: 0em 1em 0em 0em;
+        grid-area: main;
+        
+        p {
+            margin: 1em 3.5em 1em 0em;
+            font-size: 12px;
+            text-align: justify;
+        }
+    }
+
+
 }
