@@ -154,13 +154,10 @@ figure {
             background-color: #c07732;
         }
     }
-    
-
 }
 
 aside {
     grid-area: aside;
-
     img {
         width: 75%;
     }
@@ -171,17 +168,13 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-
     main {
         margin: 0em 1em 0em 0em;
         grid-area: main;
-        
         p {
             margin: 1em 3.5em 1em 0em;
             font-size: 12px;
             text-align: justify;
         }
     }
-
-
 }
