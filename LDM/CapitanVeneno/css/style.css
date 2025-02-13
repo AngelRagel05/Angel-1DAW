@@ -159,6 +159,7 @@ figure {
 aside {
     grid-area: aside;
     img {
+        min-width: 150px;
         width: 75%;
     }
 }
