@@ -86,7 +86,7 @@ p {
 @media screen and (min-width: 768px) {
     #contenedor {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 70px 600px 70px 100px 1fr;
+        grid-template-rows: 70px 600px 70px 90px 500px;
         grid-template-areas: 
         "azul1 azul1 azul1"
         "bauhaus bauhaus bauhaus"
