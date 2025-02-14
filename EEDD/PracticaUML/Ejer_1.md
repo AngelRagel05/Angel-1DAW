@@ -1,28 +1,37 @@
 ```mermaid
     classDiagram
 
-        class Persona {
-            # nombre: String
-            # edad: int
+        class Instituto {
+            # String: nombre 
         }
 
-        class Profesor {
-            # sueldoBruto: double
-            + toString() : void
+        class Persona {
+            # String: nombre
+            # Integer: edad
         }
 
         class Alumno {
             - int: numeroTlf
-            + toString() : void
+            + toString(): void
+        }
+
+        class Profesor {
+            # double: SueldoBruto
+            + setSueldoBruto()
+            + getSueldoBruto() 
+            + toString(): void
         }
 
         class Tutor {
-            - String: grupo
+            - Grupo: grupo
         }
 
     Persona <|-- Profesor
     Persona <|-- Alumno
     Profesor <|-- Tutor
+    Instituto <|-- Tutor
+    Instituto <|-- Alumno
 
     Profesor "1" --> "1..*" Alumno: Enseña
+    
 ```
