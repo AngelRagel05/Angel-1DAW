@@ -24,7 +24,7 @@ Aquí encontrarás prácticas, proyectos realizados en la asignatura Lenguajes d
 - **📂 [Display Parte 1](../LDM/DisplayParte1/Index.html)**
 - **📂 [Capitan Veneno](../LDM/CapitanVeneno/Index.html)**
 - **📂 [Grid BauHaus](../LDM/BauHaus/Index.html)**
-- - **📂 [San Valentin](../LDM/SanValentin/Index.html)**
+- **📂 [San Valentin](../LDM/SanValentin/Index.html)**
 
 ## Cómo contribuir
 Si tienes sugerencias o mejoras, siéntete libre de abrir un **issue** o hacer un **pull request**. ¡Toda ayuda es bienvenida! 🚀
