@@ -21,6 +21,9 @@ Aquí encontrarás prácticas, proyectos realizados en la asignatura Lenguajes d
 - **📂 [Práctica de posiciones, sombras y fuentes](../LDM/positions-shadows-fonts/index.html)**
 - **📂 [Overflow en cuadros de texto](../LDM/Textos/Index.html)**
 - **📂 [Uso de la propiedad `float` en CSS](../LDM/Flotante/Index.html)**
+- **📂 [Display Parte 1](../LDM/DisplayParte1/Index.html)**
+- **📂 [CapitanVeneno](../LDM/CapitanVeneno/Index.html)**
+- **📂 [Grid BauHaus](../LDM/GridBauHaus/Index.html)**
 
 ## Cómo contribuir
 Si tienes sugerencias o mejoras, siéntete libre de abrir un **issue** o hacer un **pull request**. ¡Toda ayuda es bienvenida! 🚀
