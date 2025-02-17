@@ -6,10 +6,10 @@
 Aquí encontrarás prácticas y proyectos realizados en la asignatura **Entornos de Desarrollo (EEDD)**. La idea es ir mejorando con el tiempo y documentar mi progreso.
 
 ## Contenido
-- **📂 [Contador](../EEDD/Contador/Index.html)**
-- **📂 [Curso Universitario](../EEDD/CursoUniversitario/Index.html)**
-- **📂 [Evaluable Mermaid](../EEDD/EvaluableMermaid/Index.html)**
-- **📂 [Práctica UML](../EEDD/PracticaUML/Index.html)**
+- **📂 [Contador](../EEDD/Contador)**
+- **📂 [Curso Universitario](../EEDD/CursoUniversitario)**
+- **📂 [Evaluable Mermaid](../EEDD/EvaluableMermaid)**
+- **📂 [Práctica UML](../EEDD/PracticaUML)**
 
 ## Cómo contribuir
 Si tienes sugerencias o mejoras, siéntete libre de abrir un **issue** o hacer un **pull request**. ¡Toda ayuda es bienvenida! 🚀
