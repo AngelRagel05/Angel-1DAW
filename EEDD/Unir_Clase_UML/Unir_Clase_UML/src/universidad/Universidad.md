@@ -4,7 +4,7 @@
             # List ~Estudiante~ estudiantes
 
             + aniadirEstudiante (Estudiante estudiante) void
-            + buscarEstudiante (Integer id) Estudiante
+            + buscarEstudiante (Integer id) void
             + eliminarEstudiante (Integer id) void
             + calcularPromedio (Estudiante estudiante) Integer
             + estudiantesAprobados (Estudiante estudiante) void
