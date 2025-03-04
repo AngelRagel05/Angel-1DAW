@@ -63,7 +63,6 @@ ul {
         height: auto;
         border-radius: 15px;
     }
-    
 }
 
 #galeria {
@@ -85,9 +84,33 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-    
+    #gallery {
+        text-align: center;
+        img  {
+            width: 300px;
+            height: auto;
+            border-radius: 15px;
+        }
+    }
+
+    #photos {
+        display: flex;
+        flex: wrap;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-    
+    #gallery {
+        text-align: center;
+        img  {
+            width: 300px;
+            height: auto;
+            border-radius: 15px;
+        }
+    }
+
+    #photos {
+        display: flex;
+        flex: wrap;
+    }
 }
