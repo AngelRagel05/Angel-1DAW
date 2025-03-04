@@ -27,7 +27,7 @@ header {
 
 #quees {
     text-align: center;
-    padding-bottom: 4em;
+    padding-bottom: 2em;
 }
 
 #titulo {
@@ -36,25 +36,31 @@ header {
     font-weight: bold;
 }
 
+article {
+    background-color: #eff8ff;
+}
+
 h2 {
+    font-weight: bold;
     text-align: center;
-    padding-bottom: 4em;
+    padding-bottom: 2em;
+    padding-top: 2em;
 }
 
 p {
     padding: 1.5em 2em 1em 2em;
+    font-size: small;
 }
 
 ul {
-    margin-left: 4em;
-    margin-right: 2em;
-    margin-bottom: 1em;
+    margin: 1em 2em 1em 4em;
 }
 
 #gallery {
     text-align: center;
     img  {
-        width: 60%;
+        width: 300px;
+        height: auto;
         border-radius: 15px;
     }
     
@@ -64,4 +70,24 @@ ul {
     color: #88b7e7;
     font-size: xx-large;
     font-weight: bold;
+    padding-bottom: 4em;
+}
+
+aside {
+    background-color: #eff8ff;
+}
+
+footer {
+    background-color: #80b3ec;
+    padding: 1em 0em 1em 0em;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 1024px) {
+    
 }
