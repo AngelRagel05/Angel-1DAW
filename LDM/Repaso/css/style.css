@@ -1,7 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    text-align: center;
 }
 
 .contenedor {
@@ -10,7 +14,7 @@
     margin: 0em 0em 0em 0em;
     display: flex;
     flex-direction: column;
-    padding: 1em;
+    padding: 1em 0em 0em 0em;
 }
 
 header {
@@ -56,8 +60,13 @@ ul {
     margin: 1em 2em 1em 4em;
 }
 
+#photos {
+    gap: 1em;
+}
+
 #gallery {
     text-align: center;
+    
     img  {
         width: 300px;
         height: auto;
@@ -85,32 +94,38 @@ footer {
 
 @media screen and (min-width: 768px) {
     #gallery {
+        max-width: 100%;
         text-align: center;
+
         img  {
-            width: 300px;
-            height: auto;
+            width: 30%;
             border-radius: 15px;
         }
     }
 
     #photos {
+        justify-content: center;
+        gap: 1em;
         display: flex;
-        flex: wrap;
+        flex-wrap: wrap;
     }
 }
 
 @media screen and (min-width: 1024px) {
     #gallery {
+        max-width: 100%;
         text-align: center;
+
         img  {
-            width: 300px;
-            height: auto;
+            width: 30%;
             border-radius: 15px;
         }
     }
 
     #photos {
+        justify-content: center;
+        gap: 1em;
         display: flex;
-        flex: wrap;
+        flex-wrap: wrap;
     }
 }
