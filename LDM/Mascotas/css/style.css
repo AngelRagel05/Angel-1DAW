@@ -14,7 +14,7 @@ body {
     margin: 0em 0em 0em 0em;
     display: flex;
     flex-direction: column;
-    padding: 1em 0em 0em 0em;
+    padding: 0em 0em 0em 0em;
 }
 
 header {
@@ -61,6 +61,7 @@ ul {
 }
 
 #photos {
+    margin: 1em 4em 4em 4em;
     gap: 1em;
 }
 
@@ -83,6 +84,9 @@ ul {
 
 aside {
     background-color: #eff8ff;
+    text-align: left;
+    padding: 0em 0em 1em 1em;
+    margin: 0em;
 }
 
 footer {
@@ -104,10 +108,15 @@ footer {
     }
 
     #photos {
+        margin: 1em 4em 4em 4em;
         justify-content: center;
         gap: 1em;
         display: flex;
         flex-wrap: wrap;
+    }
+
+    aside {
+        padding: 0em 3em 1em 3em;
     }
 }
 
@@ -117,15 +126,20 @@ footer {
         text-align: center;
 
         img  {
-            width: 30%;
+            width:25%;
             border-radius: 15px;
         }
     }
 
     #photos {
+        margin: 1em 4em 4em 4em;
         justify-content: center;
         gap: 1em;
         display: flex;
         flex-wrap: wrap;
+    }
+
+    aside {
+        padding: 0em 3em 1em 3em;
     }
 }
