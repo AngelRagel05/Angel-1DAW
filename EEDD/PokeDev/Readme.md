@@ -3,29 +3,29 @@
 
         class Gym {
             # String: nombre
-            # String: descripcion
+            # String: descripGym
             # String: ciudad
             # Trainer: lider
             # Type: especialidad
             # Medal: medalla
             # Region: region
 
-            + CombateLider () boolean
+            + CombateLider (Trainer lider, Trainer visitante) boolean
             + ObtenerMedalla () boolean
         }
 
         class Region {
             # String: nombre
-            # String: descripion
+            # String: descripRegion
             # Integer: numCiudades
-            # List<Pokemon>: pokemons
+            # List<Pokemon>: pokemonsR
 
             + ObtencionCiudades () Integer
         }
 
         class Pokemon {
             # String: nombre
-            # String: descripcion
+            # String: descripPokemon
             # Boolean: shinny
             # Nature: naturaleza
             # Type: tipo
@@ -41,7 +41,7 @@
             # String: nombre
             # Integer: recompensa
             # Integer: medallasObtenidas
-            # List<Pokemon>: pokemons
+            # List<Pokemon>: pokemonsT
             # List<Medal>: medallas
             # List<Item>: items
 
@@ -53,6 +53,7 @@
 
         class Medal {
             # String: nombre
+            # String: descripMedal
         }
 
         class Item {
@@ -64,6 +65,24 @@
         }
 
         class Type {
+            <<enumeration>>
+            FUEGO
+            AGUA
+            PLANTA
+            ELECTRICO
+            PSIQUICO
+            ROCA
+            LUCHA
+            FANTASMA
+            DRAGON
+            HIELO
+            VENENO
+            VOLADOR
+            NORMAL
+            TIERRA 
+        }
+
+        class SubType {
             <<enumeration>>
             FUEGO
             AGUA
