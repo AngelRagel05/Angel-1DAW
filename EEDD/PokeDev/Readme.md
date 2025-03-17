@@ -18,10 +18,9 @@
             # String: nombre
             # String: descripion
             # Integer: numCiudades
-            # Pokemon: list
+            # List<Pokemon>: pokemons
 
             + ObtencionCiudades () Integer
-            + List<Pokemon> pokemon
         }
 
         class Pokemon {
@@ -29,7 +28,7 @@
             # String: descripcion
             # Type: tipo
             # Nature: naturaleza
-            # Boolean: shiny
+            # Boolean: shinny
 
             + AddPokemon (Pokemon pokemon) void
             + DeletePokemon (Pokemon pokemon) void
@@ -41,8 +40,9 @@
         class Trainer {
             # String: nombre
             # Integer: recompensa
-            # Pokemon: list
-            # Integer: medallasObtenido
+            # List<Pokemon>: pokemons
+            # Integer: medallasObtenidas
+            # List<Medal>: medallas
 
             + AddTrainer (Trainer trainer) void
             + DeleteTrainer (Trainer trainer) void
@@ -107,7 +107,7 @@
     Gym --> "0..*" Trainer : "Tiene entrenadores"
     Gym --> "0..*" Pokemon : "Usa Pokémon"
 
-    Trainer --> "1..6" Pokemon : "Tiene"
+    Trainer --> "1.." Pokemon : "Tiene"
     Trainer --> "0..*" Medal : "Colecciona"
     Trainer --> "0..*" Item : "Posee"
 
