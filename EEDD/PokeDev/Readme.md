@@ -1,6 +1,15 @@
 ```mermaid
     classDiagram
 
+        class Region {
+            # String: nombre
+            # String: descripRegion
+            # Integer: numCiudades
+            # List<Pokemon>: pokemonsR
+
+            + ObtencionCiudades () Integer
+        }
+
         class Gym {
             # String: nombre
             # String: descripGym
@@ -14,18 +23,11 @@
             + ObtenerMedalla () boolean
         }
 
-        class Region {
-            # String: nombre
-            # String: descripRegion
-            # Integer: numCiudades
-            # List<Pokemon>: pokemonsR
-
-            + ObtencionCiudades () Integer
-        }
-
         class Pokemon {
+            # Integer: numPokedex
             # String: nombre
             # String: descripPokemon
+            # Integer: salud
             # Boolean: shinny
             # Nature: naturaleza
             # Type: tipo
@@ -33,7 +35,7 @@
             + AddPokemon (Pokemon pokemon) void
             + DeletePokemon (Pokemon pokemon) void
             + Curar () void
-            + Capturar () boolean
+            + Capturado () boolean
             + SubirNivel () void
         }
 
@@ -47,8 +49,19 @@
 
             + AddTrainer (Trainer trainer) void
             + DeleteTrainer (Trainer trainer) void
-            + CombateTrainer (Trainer rival) boolean
+            + CombateTrainer (Trainer rival, Trainer principal) boolean
             + Capturar (Pokemon pokemon) boolean
+        }
+
+        class Professor {
+            # String: nombre
+            # String especialidad
+            # Region region
+            # List<Pokemon> pokemonLaboratorio
+            # List<Item> objetosIniciales
+
+            + EntregarPokemonInicial (Trainer entrenador) void
+            + InvestigarPokemon (Pokemon pokemon) String
         }
 
         class Medal {
@@ -129,11 +142,16 @@
 
     Trainer --> "1.." Pokemon : "Tiene"
     Trainer --> "0..*" Medal : "Colecciona"
+    Trainer --> "0..*" Item : "Posee objetos"
 
     Region --> "0..*" Pokemon : "Aparecen en"
     Region --> "0..*" Gym : "Contiene"
     Region --> "0..*" Trainer : "Incluye"
 
     Pokemon --> "1" Trainer : "Pertenencia"
+
+    Professor --> Region
+    Professor --> "0..*" Pokemon : "Investiga"
+    Professor --> "0..*" Item : "Entrega objetos"
 
 ```
