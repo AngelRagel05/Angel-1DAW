@@ -4,25 +4,10 @@ import models.interfaces.iRegion;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Region implements iRegion {
 
-    private static Scanner sc = new Scanner(System.in);
-
     private static final String ADDED = " añadido correctamente a la lista.";
-
-    private static final String POKEMON_NAME = "Que nombre tendrá el pokémon.";
-    private static final String POKEMON_DESCRIPTION = "Que descripción tendrá en pokémon.";
-    private static final String POKEMON_HEALTH = "Que vida máxima tendrá el pokémon.";
-    private static final String POKEMON_SHINNY = "El pokémon es shinny, introduce false si es falso o true si es verdadero.";
-    private static final String NEGATIVE_ENTRY = "Este campo no puede ser negativo.";
-    private static final String INVALID_ENTRY = "Entrada no válida. Ingresa un número.";
-    private static final String CHOOSE_TYPE = "Elige un tipo del pokémon.";
-    private static final String CHOOSE_NUMBER_TYPE = "Elige el número correspondiente al tipo.";
-    private static final String CHOOSE_NATURE = "Elige una naturaleza del pokémon.";
-    private static final String CHOOSE_NUMBER_NATURE = "Elige el número correspondiente a la naturaleza.";
-    private static final String INVALID_OPTION = "Opción inválida. Introduce un número entre 1 y ";
 
 //    Atributos
     protected String nombre;
