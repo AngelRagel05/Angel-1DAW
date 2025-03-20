@@ -1,6 +1,118 @@
 ```mermaid
     classDiagram
 
+        class Person {
+            <<abstract>>
+            # String: nombre
+        }
+
+        class Item {
+            <<enumeration>>
+            POKEBALL
+            POTION
+            REVIVE
+            FULL_RESTORE
+            RARE_CANDY
+        }
+
+        class Nature {
+            <<enumeration>>
+            FUERTE
+            OSADO
+            MIEDOSO
+            ALEGRE
+            MODESTO
+            SERENO
+            FIRME
+            MANSO
+            SERIO
+            DOCIL
+            AFABLE
+            PICARA
+            HURAÑA
+            ALOCADA
+            RARA
+            AMABLE
+            FLOJA
+        }
+
+        class Type {
+            <<enumeration>>
+            +SubType[] subtipos
+
+            +SubType[] getSubtipos()
+        }
+
+        class SubType {
+            <<enumeration>>
+            AGUA
+            FUEGO
+            PLANTA
+            ROCA
+            TIERRA
+            ELECTRICO
+            HIELO
+            LUCHA
+            BICHO
+            VOLADOR
+            PSIQUICO
+            SINIESTRO
+            FANTASMA
+            VENENO
+            ACERO
+            DRAGON
+            HADA
+            NORMAL
+        }
+```
+
+---
+
+```mermaid
+
+    classDiagram
+
+        class iGym {
+            <<interface>>
+            winMedal (Trainer lider, Trainer visitante)
+        }
+
+        class iPokemon {
+            <<interface>>
+            cure (Item item)
+            levelUp (Item item)
+            revive (Item item)
+        }
+
+        class iProfessor {
+            <<interface>>
+            deliverStarterPokemon (Trainer trainer)
+            researchPokemon (Pokemon pokemon)
+        }
+
+        class iRegion {
+            <<interface>>
+            List<Medal> showMedals()
+            List<Pokemon> showPokemons()
+            List<Gym> showGym()
+            ArrayList<Trainer> showTrainers()
+            void addTrainer (Trainer trainer)
+        }
+
+        class iTrainer {
+            
+        }
+
+
+
+```
+
+---
+
+
+```mermaid
+    classDiagram
+
         class Region {
             # String: nombre
             # String: descripRegion
@@ -69,13 +181,7 @@
             # String: descripMedal
         }
 
-        class Item {
-            <<enumeration>>
-            POKEBALL
-            POTION
-            REVIVE
-            FULL_RESTORE
-        }
+
 
         class Type {
             <<enumeration>>
@@ -113,26 +219,7 @@
             TIERRA 
         }
 
-        class Nature {
-            <<enumeration>>
-            FUERTE
-            OSADO
-            MIEDOSO
-            ALEGRE
-            MODESTO
-            SERENO
-            FIRME
-            MANSO
-            SERIO
-            DOCIL
-            AFABLE
-            PICARA
-            HURAÑA
-            ALOCADA
-            RARA
-            AMABLE
-            FLOJA
-        }
+
 
     Gym --> Region
     Gym --> Trainer : "Líder"
