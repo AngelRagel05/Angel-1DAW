@@ -1,0 +1,310 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f4f1ea;
+    color: #3e2723;
+    margin: 0;
+    padding: 0;
+    cursor: url('../imagenes/raton.png'), auto;
+    text-decoration: none; 
+    
+}
+
+.loader {
+    display: inline-block;
+    width: fit-content;
+    font-size: 40px;
+    line-height: 1.5;
+    font-family: system-ui,sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0000;
+    -webkit-text-stroke: 1px #000;
+    background:
+      radial-gradient(1.13em at 50% 1.6em,#000 99%,#0000 101%) calc(50% - 1.6em) 0/3.2em 100% text,
+      radial-gradient(1.13em at 50% -0.8em,#0000 99%,#000 101%) 50% .8em/3.2em 100% repeat-x  text;
+    animation: l9 2s linear infinite;
+  }
+  .loader:before {
+    content: "📚 BookTrack 📚";
+  }
+  @keyframes l9 {
+    to {background-position: calc(50% + 1.6em) 0,calc(50% + 3.2em) .8em}
+  }
+
+
+@keyframes waveGradient {
+    0% {
+        background-position: -200% 0;
+    }
+    50% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+header {
+    
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(90deg, #ac825c, #db7311, #ac825c);
+    background-size: 200% 100%;
+    animation: waveGradient 10s ease-in-out infinite;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #1a1a2e; 
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #6b4c2f, #db7311); 
+    border-radius: 3px; 
+    border: 2px solid #1a1a2e; 
+    box-shadow: 0 0 5px rgba(255, 82, 82, 0.6); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #db7311,#6b4c2f); 
+    box-shadow: 0 0 8px rgba(255, 100, 100, 0.9); 
+}
+
+
+.scrollbar-contenedor {
+    scrollbar-width: thin; 
+    scrollbar-color: #ff512f #1a1a2e; 
+}
+
+
+header {
+    background-color: #8d6e63;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav {
+    background-color: #a1887f;
+    text-align: center;
+    padding: 1rem 0;
+    cursor: url('../imagenes/raton.png'), auto;
+    text-decoration: none; 
+    
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    cursor: url('../imagenes/raton.png'), auto;
+    text-decoration: none; 
+}
+
+nav ul li {
+    margin: 0;
+    cursor: url('../imagenes/raton.png'), auto;
+    text-decoration: none; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;  
+    font-size: 1.1rem;  
+    padding: 10px 15px;  
+    position: relative; 
+    transition: color 0.3s ease;  
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+
+nav ul li a::after {
+    content: '';  
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #d7ccc8;  
+    transition: width 0.3s ease;  
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+
+nav ul li a:hover {
+    color: #d7ccc8;  
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    color: #d7ccc8; 
+}
+
+nav ul li a:hover {
+    color: #d7ccc8; 
+}
+
+nav ul li a:active {
+    color: #d7ccc8; 
+}
+
+nav ul li a:hover::after {
+    width: 100%;  
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2rem;
+    text-decoration: none; 
+}
+
+section h2 {
+    color: #5d4037;
+    border-bottom: 2px solid #d7ccc8;
+    padding-bottom: 0.5rem;
+    text-decoration: none; 
+}
+
+section p, section ul {
+    line-height: 1.6;
+}
+
+section ul li a:hover {
+    color: #4d403c;
+    cursor: url('../imagenes/raton.png'), auto;
+    text-decoration: none; 
+}
+section ul li a {
+    cursor: url('../imagenes/raton.png'), auto;
+    text-decoration: none; 
+}
+
+footer {
+    background-color: #5d4037;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+footer p {
+    margin: 0;
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+.social-icons, .social-icons2 {
+    margin-top: 10px;
+    display: flex; 
+    justify-content: center; 
+    gap: 60px; 
+    position: relative;
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+
+.social-icon, .social-icon2 {
+    position: relative; 
+    transition: transform 0.5s ease-in-out;
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+.social-icon img, .social-icon2 img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+.social-icon:hover, .social-icon2:hover {
+    transform: translateX(-20px); 
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+.social-icon:hover img, .social-icon2:hover img {
+    transform: scale(1.3); 
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+.social-icon:hover::after{
+    content: "@Ángel Jiménez";
+    position: absolute;
+    top: 50%;
+    left: 40px; 
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #8b7b51cc; 
+    padding: 5px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+.social-icon:hover ~ .social-icon, .social-icon2:hover ~ .social-icon2 {
+    transform: translateX(70px);
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+.social-icon2:hover::after {
+    content: "@Ismael Vargas";
+    position: absolute;
+    top: 50%;
+    left: 40px; 
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(139, 123, 81, 0.8); 
+    padding: 5px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: url('../imagenes/raton.png'), auto;
+}
+
+
+a:link, a:visited {
+    color: #d49640; 
+}
+
+a:hover {
+    color: #5d4037; 
+}
+
+a:active {
+    color: #d49640; 
+}
