@@ -1,244 +1,197 @@
 ```mermaid
     classDiagram
+    %% Enumeraciones
+    class Item {
+        <<enumeration>>
+        POKEBALL
+        POTION
+        REVIVE
+        FULL_RESTORE
+        RARE_CANDY
+    }
 
-        class Person {
-            <<abstract>>
-            # String: nombre
-        }
+    class Nature {
+        <<enumeration>>
+        FUERTE
+        OSADO
+        MIEDOSO
+        ALEGRE
+        MODESTO
+        SERENO
+        FIRME
+        MANSO
+        SERIO
+        DOCIL
+        AFABLE
+        PICARA
+        HURAÑA
+        ALOCADA
+        RARA
+        AMABLE
+        FLOJA
+    }
 
-        class Item {
-            <<enumeration>>
-            POKEBALL
-            POTION
-            REVIVE
-            FULL_RESTORE
-            RARE_CANDY
-        }
+    class Type {
+        <<enumeration>>
+        +SubType[] subtipos
+        +SubType[] getSubtipos()
+    }
 
-        class Nature {
-            <<enumeration>>
-            FUERTE
-            OSADO
-            MIEDOSO
-            ALEGRE
-            MODESTO
-            SERENO
-            FIRME
-            MANSO
-            SERIO
-            DOCIL
-            AFABLE
-            PICARA
-            HURAÑA
-            ALOCADA
-            RARA
-            AMABLE
-            FLOJA
-        }
+    class SubType {
+        <<enumeration>>
+        AGUA
+        FUEGO
+        PLANTA
+        ROCA
+        TIERRA
+        ELECTRICO
+        HIELO
+        LUCHA
+        BICHO
+        VOLADOR
+        PSIQUICO
+        SINIESTRO
+        FANTASMA
+        VENENO
+        ACERO
+        DRAGON
+        HADA
+        NORMAL
+    }
 
-        class Type {
-            <<enumeration>>
-            +SubType[] subtipos
+    %% Interfaces
+    class iGym {
+        <<interface>>
+        winMedal (Trainer lider, Trainer visitante) boolean
+    }
 
-            +SubType[] getSubtipos()
-        }
+    class iPokemon {
+        <<interface>>
+        cure (Item item) void
+        levelUp (Item item) void
+        revive (Item item) void 
+    }
 
-        class SubType {
-            <<enumeration>>
-            AGUA
-            FUEGO
-            PLANTA
-            ROCA
-            TIERRA
-            ELECTRICO
-            HIELO
-            LUCHA
-            BICHO
-            VOLADOR
-            PSIQUICO
-            SINIESTRO
-            FANTASMA
-            VENENO
-            ACERO
-            DRAGON
-            HADA
-            NORMAL
-        }
-```
+    class iProfessor {
+        <<interface>>
+        deliverStarterPokemon (Trainer trainer) void
+        researchPokemon (Pokemon pokemon) void
+    }
 
----
+    class iRegion {
+        <<interface>>
+        showMedals() List<Medal> 
+        showPokemons() List<Pokemon> 
+        showGym() List<Gym> 
+        showTrainers() ArrayList<Trainer> 
+        addTrainer (Trainer trainer) void 
+    }
 
-```mermaid
+    class iTrainer {
+        <<interface>>
+        addPokemon() void 
+        combatTrainer(Trainer rival, Trainer principal) boolean 
+        capture(Item item) boolean 
+    }
 
-    classDiagram
+    %% Clases
+    class Gym {
+        # String: nombre
+        # String: descripGym
+        # String: ciudad
+        # Trainer: lider
+        # Type: tipo
+        # Medal: medalla
+        # Region: region
+        
+        + winMedal (Trainer lider, Trainer visitante) boolean
+    }
 
-        class iGym {
-            <<interface>>
-            winMedal (Trainer lider, Trainer visitante)
-        }
+    class Medal {
+        # String: nombre
+        # String: descripcionMedal
+    }
 
-        class iPokemon {
-            <<interface>>
-            cure (Item item)
-            levelUp (Item item)
-            revive (Item item)
-        }
+    class Pokemon {
+        # Integer: numPokedex
+        # String: nombre
+        # String: descripcionPokemon
+        # Double: salud
+        # Double: maxSalud
+        # Integer: nivel
+        # Boolean: shinny
+        # Nature: naturaleza
+        # Type: tipo
 
-        class iProfessor {
-            <<interface>>
-            deliverStarterPokemon (Trainer trainer)
-            researchPokemon (Pokemon pokemon)
-        }
+        + cure (Item item) void
+        + levelUp (Item item) void
+        + revive (Item item) void
+    }
 
-        class iRegion {
-            <<interface>>
-            List<Medal> showMedals()
-            List<Pokemon> showPokemons()
-            List<Gym> showGym()
-            ArrayList<Trainer> showTrainers()
-            void addTrainer (Trainer trainer)
-        }
+    class Professor {
+        # String: especialidad
+        # Region: region
+        # List<Pokemon>: pokemonLab
+        # ArrayList<Item>: objetosIniciales
 
-        class iTrainer {
-            
-        }
+        + deliverStarterPokemon (Trainer trainer) void
+        + researchPokemon (Pokemon pokemon) void
+    }
 
+    class Region {
+        # String: nombre
+        # String: descripcionRegion
+        # List<Medal>: medallas
+        # List<Pokemon>: pokemons
+        # List<Gym>: gimnasios
+        # ArrayList<Trainer>: entrenadores
 
+        + showMedals() List<Medal>
+        + showPokemons() List<Pokemon>
+        + showGym() List<Gym>
+        + showTrainers() ArrayList<Trainer>
+        + addTrainer (Trainer trainer) void
+    }
 
-```
+    class Trainer {
+        # Double: recompensa
+        # ArrayList<Pokemon>: pokemons
+        # ArrayList<Medal>: medallas
+        # ArrayList<Item>: items
 
----
+        + addPokemon() void
+        + combatTrainer(Trainer rival, Trainer principal) boolean
+        + capture(Item item) boolean
+    }
 
+    %% Relaciones
 
-```mermaid
-    classDiagram
+    Trainer "1" -- "*" Pokemon : tiene
+    Trainer "1" -- "*" Medal : gana
+    Trainer "1" -- "*" Item : posee
 
-        class Region {
-            # String: nombre
-            # String: descripRegion
-            # Integer: numCiudades
-            # List<Pokemon>: pokemonsR
+    Pokemon "1" -- "1" Type : pertenece a
+    Pokemon "1" -- "1" Nature : tiene
 
-            + ObtencionCiudades () Integer
-        }
+    Gym "1" -- "1" Trainer : lidera
+    Gym "1" -- "1" Type : especializado en
+    Gym "1" -- "1" Medal : otorga
 
-        class Gym {
-            # String: nombre
-            # String: descripGym
-            # String: ciudad
-            # Trainer: lider
-            # Type: especialidad
-            # Medal: medalla
-            # Region: region
+    Region "1" -- "*" Gym : contiene
+    Region "1" -- "*" Trainer : habita
+    Region "1" -- "*" Pokemon : tiene
+    Region "1" -- "*" Medal : distribuye
 
-            + CombateLider (Trainer lider, Trainer visitante) boolean
-            + ObtenerMedalla () boolean
-        }
+    Professor "1" -- "1" Region : investiga en
+    Professor "1" -- "*" Pokemon : estudia
+    Professor "1" -- "*" Item : entrega iniciales
 
-        class Pokemon {
-            # Integer: numPokedex
-            # String: nombre
-            # String: descripPokemon
-            # Integer: salud
-            # Boolean: shinny
-            # Nature: naturaleza
-            # Type: tipo
+    Type "1" -- "*" SubType : compuesto por
 
-            + AddPokemon (Pokemon pokemon) void
-            + DeletePokemon (Pokemon pokemon) void
-            + Curar () void
-            + Capturado () boolean
-            + SubirNivel () void
-        }
-
-        class Trainer {
-            # String: nombre
-            # Integer: recompensa
-            # Integer: medallasObtenidas
-            # List<Pokemon>: pokemonsT
-            # List<Medal>: medallas
-            # List<Item>: items
-
-            + AddTrainer (Trainer trainer) void
-            + DeleteTrainer (Trainer trainer) void
-            + CombateTrainer (Trainer rival, Trainer principal) boolean
-            + Capturar (Pokemon pokemon) boolean
-        }
-
-        class Professor {
-            # String: nombre
-            # String especialidad
-            # Region region
-            # List<Pokemon> pokemonLaboratorio
-            # List<Item> objetosIniciales
-
-            + EntregarPokemonInicial (Trainer entrenador) void
-            + InvestigarPokemon (Pokemon pokemon) String
-        }
-
-        class Medal {
-            # String: nombre
-            # String: descripMedal
-        }
-
-
-
-        class Type {
-            <<enumeration>>
-            FUEGO
-            AGUA
-            PLANTA
-            ELECTRICO
-            PSIQUICO
-            ROCA
-            LUCHA
-            FANTASMA
-            DRAGON
-            HIELO
-            VENENO
-            VOLADOR
-            NORMAL
-            TIERRA 
-        }
-
-        class SubType {
-            <<enumeration>>
-            FUEGO
-            AGUA
-            PLANTA
-            ELECTRICO
-            PSIQUICO
-            ROCA
-            LUCHA
-            FANTASMA
-            DRAGON
-            HIELO
-            VENENO
-            VOLADOR
-            NORMAL
-            TIERRA 
-        }
-
-
-
-    Gym --> Region
-    Gym --> Trainer : "Líder"
-    Gym --> Medal
-    Gym --> "0..*" Trainer : "Tiene entrenadores"
-    Gym --> "0..*" Pokemon : "Usa Pokémon"
-
-    Trainer --> "1.." Pokemon : "Tiene"
-    Trainer --> "0..*" Medal : "Colecciona"
-    Trainer --> "0..*" Item : "Posee objetos"
-
-    Region --> "0..*" Pokemon : "Aparecen en"
-    Region --> "0..*" Gym : "Contiene"
-    Region --> "0..*" Trainer : "Incluye"
-
-    Pokemon --> "1" Trainer : "Pertenencia"
-
-    Professor --> Region
-    Professor --> "0..*" Pokemon : "Investiga"
-    Professor --> "0..*" Item : "Entrega objetos"
+    iGym <|.. Gym
+    iTrainer <|.. Trainer
+    iPokemon <|.. Pokemon
+    iRegion <|.. Region
+    iProfessor <|.. Professor
 
 ```

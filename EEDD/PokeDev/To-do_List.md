@@ -29,6 +29,8 @@
 - Actualizar iRegion mermaid
 - Actualizar iTrainer mermaid
 
+añadir tipo de los metodos
+
 ---
 
 - Actualizar Gym mermaid
