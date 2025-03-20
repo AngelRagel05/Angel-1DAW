@@ -23,22 +23,19 @@
 
 ---
 
-- Actualizar iGym mermaid
-- Actualizar iPokemon mermaid
-- Actualizar iProfessor mermaid
-- Actualizar iRegion mermaid
-- Actualizar iTrainer mermaid
-
-añadir tipo de los metodos
+- Actualizar iGym mermaid ✅
+- Actualizar iPokemon mermaid ✅
+- Actualizar iProfessor mermaid ✅
+- Actualizar iRegion mermaid ✅
+- Actualizar iTrainer mermaid ✅
 
 ---
 
-- Actualizar Gym mermaid
-- Actualizar Pokemon mermaid
-- Actualizar Professor mermaid
-- Actualizar Region mermaid
-- Actualizar Trainer mermaid
-- Actualizar Medal mermaid
+- Actualizar Gym mermaid ✅
+- Actualizar Pokemon mermaid ✅
+- Actualizar Professor mermaid ✅
+- Actualizar Region mermaid ✅ 
+- Actualizar Trainer mermaid ✅
+- Actualizar Medal mermaid ✅
 
 ---
-
