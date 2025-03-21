@@ -39,3 +39,10 @@
 - Actualizar Medal mermaid ✅
 
 ---
+
+- GymTest 
+- MedalTest ✅
+- PokemonTest ✅
+- ProfessorTest
+- RegionTest
+- TrainerTest
