@@ -63,13 +63,21 @@
     class iGym {
         <<interface>>
         winMedal (Trainer lider, Trainer visitante) boolean
+        getNombre() String
+    }
+
+    class iMedal {
+        getNombre() String
     }
 
     class iPokemon {
         <<interface>>
         cure (Item item) void
         levelUp (Item item) void
-        revive (Item item) void 
+        revive (Item item) void
+        getNombre() String
+        getTipo() Type
+        getNivel() Integer
     }
 
     class iProfessor {
@@ -105,11 +113,14 @@
         # Region: region
         
         + winMedal (Trainer lider, Trainer visitante) boolean
+        + getNombre() String
     }
 
     class Medal {
         # String: nombre
         # String: descripcionMedal
+
+        + getNombre() String
     }
 
     class Pokemon {
@@ -126,6 +137,9 @@
         + cure (Item item) void
         + levelUp (Item item) void
         + revive (Item item) void
+        + getNombre() String
+        + getTipo() Type
+        + getNivel() Integer
     }
 
     class Professor {
