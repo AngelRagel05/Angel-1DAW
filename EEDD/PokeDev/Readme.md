@@ -165,33 +165,18 @@
     }
 
     %% Relaciones
-
-    Trainer "1" -- "*" Pokemon : tiene
-    Trainer "1" -- "*" Medal : gana
-    Trainer "1" -- "*" Item : posee
-
-    Pokemon "1" -- "1" Type : pertenece a
-    Pokemon "1" -- "1" Nature : tiene
-
-    Gym "1" -- "1" Trainer : lidera
-    Gym "1" -- "1" Type : especializado en
-    Gym "1" -- "1" Medal : otorga
-
     Region "1" -- "*" Gym : contiene
     Region "1" -- "*" Trainer : habita
     Region "1" -- "*" Pokemon : tiene
     Region "1" -- "*" Medal : distribuye
 
+    Gym "1" -- "1" Trainer : lidera
+    Gym "1" -- "1" Medal : otorga
+
+    Trainer "1" -- "*" Pokemon : tiene
+    Trainer "1" -- "*" Medal : gana
+
     Professor "1" -- "1" Region : investiga en
     Professor "1" -- "*" Pokemon : estudia
-    Professor "1" -- "*" Item : entrega iniciales
-
-    Type "1" -- "*" SubType : compuesto por
-
-    iGym <|.. Gym
-    iTrainer <|.. Trainer
-    iPokemon <|.. Pokemon
-    iRegion <|.. Region
-    iProfessor <|.. Professor
 
 ```
