@@ -40,7 +40,7 @@
 
 ---
 
-- GymTest 
+- GymTest ✅
 - MedalTest ✅
 - PokemonTest ✅
 - ProfessorTest ✅
