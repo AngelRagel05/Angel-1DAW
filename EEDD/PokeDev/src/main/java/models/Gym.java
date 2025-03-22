@@ -4,7 +4,10 @@ import models.enumerations.SubType;
 import models.enumerations.Type;
 import models.interfaces.iGym;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Gym implements iGym {
 
@@ -34,166 +37,75 @@ public class Gym implements iGym {
     }
 
 //    Métodos
-    public boolean winMedal (Trainer lider, Trainer visitante) {
-        boolean medalla = false;
-        if (combatLeader(lider, visitante) == true) {
-            medalla = true;
-        }
-        return medalla;
-    }
-
-//    Funciones
-//    Funcion del combate que llama a otras dos para saber quien gana en tipo
-    private boolean combatLeader(Trainer lider, Trainer visitante) {
-        boolean ganador = false;
-
-        // Obtener los primeros 5 Pokémon de cada Trainer
-        List<Pokemon> pokemonsLider = lider.getPokemons().subList(0, 5);
-        List<Pokemon> pokemonsVisitante = visitante.getPokemons().subList(0, 5);
-
-        // Función para comparar el tipo de los Pokémon
-        int combatesGanadosLider = 0;
-        int combatesGanadosVisitante = 0;
-
-        for (int i = 0; i < 5; i++) {
-            Pokemon pokemonLider = pokemonsLider.get(i);
-            Pokemon pokemonVisitante = pokemonsVisitante.get(i);
-
-            Type tipoLider = pokemonLider.getTipo();
-            Type tipoVisitante = pokemonVisitante.getTipo();
-
-            // Subtipos combinados
-            SubType[] subtiposLider = tipoLider.getSubtipos();
-            SubType[] subtiposVisitante = tipoVisitante.getSubtipos();
-
-            // Comprobamos las relaciones de tipo (condiciones explícitas)
-            boolean liderGana = false;
-            boolean visitanteGana = false;
-
-            // Primero, comprobamos los subtipos
-            for (SubType subLider : subtiposLider) {
-                for (SubType subVisitante : subtiposVisitante) {
-                    if (advantageSubtypes(subLider, subVisitante)) {
-                        visitanteGana = true;
-                    } else if (advantageSubtypes(subVisitante, subLider)) {
-                        liderGana = true;
-                    }
-                }
-            }
-
-            // Si no hay ganador por subtipos, verificamos los tipos principales
-            if (!liderGana && !visitanteGana) {
-                if (advantage(tipoVisitante, tipoLider)) {
-                    visitanteGana = true;
-                } else if (advantage(tipoLider, tipoVisitante)) {
-                    liderGana = true;
-                }
-            }
-
-            // Si no hay un ganador por tipo, usamos el nivel del Pokémon para decidir el combate
-            if (!liderGana && !visitanteGana) {
-                if (pokemonVisitante.getNivel() > pokemonLider.getNivel()) {
-                    combatesGanadosVisitante++;
-                } else if (pokemonLider.getNivel() > pokemonVisitante.getNivel()) {
-                    combatesGanadosLider++;
-                }
-            } else {
-                // Si hay un ganador por tipo o subtipo, asignamos el punto correspondiente
-                if (visitanteGana) {
-                    combatesGanadosVisitante++;
-                } else {
-                    combatesGanadosLider++;
-                }
-            }
-        }
-
-        // Al final, el entrenador que haya ganado más combates será el ganador
-        if (combatesGanadosLider > combatesGanadosVisitante) {
-            ganador = false; // El líder gana
-        } else if (combatesGanadosVisitante > combatesGanadosLider) {
-            ganador = true; // El visitante gana
-        }
-
-        return ganador;
-    }
-
-//    Funcion que determina si un tipo A tiene ventaja sobre un tipo B
-    private boolean advantage(Type tipoA, Type tipoB) {
-        // Aquí se incluyen las relaciones de ventaja entre los tipos principales
-        if (tipoA == Type.AGUA) {
-            return tipoB == Type.FUEGO || tipoB == Type.ROCA || tipoB == Type.TIERRA;
-        } else if (tipoA == Type.FUEGO) {
-            return tipoB == Type.PLANTA || tipoB == Type.HIELO || tipoB == Type.BICHO || tipoB == Type.ACERO;
-        } else if (tipoA == Type.PLANTA) {
-            return tipoB == Type.AGUA || tipoB == Type.ROCA || tipoB == Type.TIERRA;
-        } else if (tipoA == Type.ROCA) {
-            return tipoB == Type.AGUA || tipoB == Type.PLANTA || tipoB == Type.LUCHA || tipoB == Type.TIERRA || tipoB == Type.ACERO;
-        } else if (tipoA == Type.TIERRA) {
-            return tipoB == Type.AGUA || tipoB == Type.PLANTA || tipoB == Type.HIELO;
-        } else if (tipoA == Type.ELECTRICO) {
-            return tipoB == Type.AGUA;
-        } else if (tipoA == Type.HIELO) {
-            return tipoB == Type.AGUA || tipoB == Type.ROCA || tipoB == Type.ACERO || tipoB == Type.FUEGO;
-        } else if (tipoA == Type.LUCHA) {
-            return tipoB == Type.NORMAL || tipoB == Type.HIELO || tipoB == Type.ROCA || tipoB == Type.SINIESTRO || tipoB == Type.ACERO;
-        } else if (tipoA == Type.BICHO) {
-            return tipoB == Type.PLANTA || tipoB == Type.PSIQUICO || tipoB == Type.SINIESTRO;
-        } else if (tipoA == Type.VOLADOR) {
-            return tipoB == Type.PLANTA || tipoB == Type.LUCHA || tipoB == Type.BICHO;
-        } else if (tipoA == Type.PSIQUICO) {
-            return tipoB == Type.LUCHA || tipoB == Type.VENENO;
-        } else if (tipoA == Type.SINIESTRO) {
-            return tipoB == Type.PSIQUICO || tipoB == Type.FANTASMA;
-        } else if (tipoA == Type.FANTASMA) {
-            return tipoB == Type.PSIQUICO || tipoB == Type.FANTASMA;
-        } else if (tipoA == Type.VENENO) {
-            return tipoB == Type.PLANTA || tipoB == Type.HADA;
-        } else if (tipoA == Type.ACERO) {
-            return tipoB == Type.HIELO || tipoB == Type.ROCA || tipoB == Type.HADA;
-        } else if (tipoA == Type.DRAGON) {
-            return tipoB == Type.DRAGON || tipoB == Type.HADA;
-        } else if (tipoA == Type.HADA) {
-            return tipoB == Type.DRAGON || tipoB == Type.SINIESTRO || tipoB == Type.VENENO;
-        } else if (tipoA == Type.NORMAL) {
-            return tipoB == Type.ROCA || tipoB == Type.FANTASMA || tipoB == Type.PSIQUICO;
-        }
-
-        return false;
-    }
-
-//    Funcion que determina si un subtipo A tiene ventaja sobre un subtipo B
-    private boolean advantageSubtypes(SubType subA, SubType subB) {
-        // Aquí se añaden las relaciones entre subtipos, usando condiciones como el ejemplo anterior
-        if (subA == SubType.FUEGO && subB == SubType.VOLADOR) {
-            return true; // FUEGO tiene ventaja sobre VOLADOR
-        }
-        if (subA == SubType.AGUA && subB == SubType.TIERRA) {
-            return true; // AGUA tiene ventaja sobre TIERRA
-        }
-        if (subA == SubType.PLANTA && subB == SubType.VENENO) {
-            return true; // PLANTA tiene ventaja sobre VENENO
-        }
-        if (subA == SubType.ELECTRICO && subB == SubType.VOLADOR) {
-            return true; // ELECTRICO tiene ventaja sobre VOLADOR
-        }
-        if (subA == SubType.PSIQUICO && subB == SubType.HIELO) {
-            return true; // PSIQUICO tiene ventaja sobre HIELO
-        }
-        if (subA == SubType.ROCA && subB == SubType.TIERRA) {
-            return true; // ROCA tiene ventaja sobre TIERRA
-        }
-        if (subA == SubType.LUCHA && subB == SubType.FANTASMA) {
-            return true; // LUCHA tiene ventaja sobre FANTASMA
-        }
-        if (subA == SubType.DRAGON && subB == SubType.VENENO) {
-            return true; // DRAGON tiene ventaja sobre VENENO
-        }
-
-        // Resto de las combinaciones de subtipos
-        return false;
+    public boolean winMedal(Trainer lider, Trainer visitante) {
+        return combatLeader(lider, visitante);
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
+    }
+
+//    Funciones
+    protected boolean combatLeader(Trainer lider, Trainer visitante) {
+        List<Pokemon> pokemonsLider = lider.getPokemons().subList(0, 5);
+        List<Pokemon> pokemonsVisitante = visitante.getPokemons().subList(0, 5);
+
+        int combatesGanadosLider = 0, combatesGanadosVisitante = 0;
+
+        for (int i = 0; i < 5; i++) {
+            Pokemon pLider = pokemonsLider.get(i), pVisitante = pokemonsVisitante.get(i);
+            boolean liderGana = checkAdvantage(pLider, pVisitante);
+            boolean visitanteGana = checkAdvantage(pVisitante, pLider);
+
+            if (liderGana ^ visitanteGana) { // Solo uno gana
+                if (liderGana) combatesGanadosLider++;
+                else combatesGanadosVisitante++;
+            } else { // Empate, decidir por nivel
+                if (pLider.getNivel() > pVisitante.getNivel()) combatesGanadosLider++;
+                else if (pVisitante.getNivel() > pLider.getNivel()) combatesGanadosVisitante++;
+            }
+        }
+        return combatesGanadosVisitante > combatesGanadosLider;
+    }
+
+    private boolean checkAdvantage(Pokemon atacante, Pokemon defensor) {
+        return hasTypeAdvantage(atacante.getTipo(), defensor.getTipo()) ||
+                hasSubTypeAdvantage(atacante.getTipo().getSubtipos(), defensor.getTipo().getSubtipos());
+    }
+
+    private boolean hasTypeAdvantage(Type atacante, Type defensor) {
+        Map<Type, List<Type>> ventajas = new HashMap<>();
+
+        ventajas.put(Type.AGUA, List.of(Type.FUEGO, Type.ROCA, Type.TIERRA));
+        ventajas.put(Type.FUEGO, List.of(Type.PLANTA, Type.HIELO, Type.BICHO, Type.ACERO));
+        ventajas.put(Type.PLANTA, List.of(Type.AGUA, Type.ROCA, Type.TIERRA));
+        ventajas.put(Type.ELECTRICO, List.of(Type.AGUA));
+        ventajas.put(Type.HIELO, List.of(Type.PLANTA, Type.TIERRA, Type.DRAGON, Type.VOLADOR));
+        ventajas.put(Type.LUCHA, List.of(Type.NORMAL, Type.HIELO, Type.ROCA, Type.SINIESTRO, Type.ACERO));
+        ventajas.put(Type.BICHO, List.of(Type.PLANTA, Type.PSIQUICO, Type.SINIESTRO));
+        ventajas.put(Type.VOLADOR, List.of(Type.PLANTA, Type.LUCHA, Type.BICHO));
+        ventajas.put(Type.PSIQUICO, List.of(Type.LUCHA, Type.VENENO));
+        ventajas.put(Type.SINIESTRO, List.of(Type.PSIQUICO, Type.FANTASMA));
+        ventajas.put(Type.FANTASMA, List.of(Type.PSIQUICO, Type.FANTASMA));
+        ventajas.put(Type.VENENO, List.of(Type.PLANTA, Type.HADA));
+        ventajas.put(Type.ACERO, List.of(Type.HIELO, Type.ROCA, Type.HADA));
+        ventajas.put(Type.DRAGON, List.of(Type.DRAGON));
+        ventajas.put(Type.HADA, List.of(Type.DRAGON, Type.SINIESTRO, Type.LUCHA));
+
+        return ventajas.getOrDefault(atacante, List.of()).contains(defensor);
+    }
+
+    private boolean hasSubTypeAdvantage(SubType[] atacante, SubType[] defensor) {
+        Map<SubType, SubType> ventajas = Map.of(
+                SubType.FUEGO, SubType.VOLADOR,
+                SubType.AGUA, SubType.TIERRA,
+                SubType.PLANTA, SubType.VENENO,
+                SubType.ELECTRICO, SubType.VOLADOR,
+                SubType.PSIQUICO, SubType.HIELO,
+                SubType.ROCA, SubType.TIERRA,
+                SubType.LUCHA, SubType.FANTASMA,
+                SubType.DRAGON, SubType.VENENO
+        );
+        return Arrays.stream(atacante).anyMatch(a -> Arrays.stream(defensor).anyMatch(d -> ventajas.getOrDefault(a, null) == d));
     }
 }

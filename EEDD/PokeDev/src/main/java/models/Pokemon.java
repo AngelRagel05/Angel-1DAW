@@ -7,7 +7,11 @@ import models.interfaces.iPokemon;
 
 public class Pokemon implements iPokemon {
 
-    private final static String INCORRECT_ITEM = "No ha elegido el item correcto.";
+    private final static String INCORRECT_ITEM = "Ha elegido el item incorrecto.";
+    private final static String CURE_POKEMON = "Se ha curado a su Pokemon";
+    private final static String NO_LEVEL_UP = "No se puede subir más de nivel";
+    private final static String LEVEL_UP = "Su pokemon a subido de nivel";
+    private final static String REVIVE = "Su pokemon ha revivido";
 
 //    Atributos
     protected Integer numPokedex;
@@ -21,11 +25,11 @@ public class Pokemon implements iPokemon {
     protected Type tipo;
 
 //    Constructor
-    public Pokemon(Integer numPokedex, String nombre, String descripcionPokemon, Double maxSalud, Integer nivel, Boolean shinny, Nature naturaleza, Type tipo) {
+    public Pokemon(Integer numPokedex, String nombre, String descripcionPokemon, Double salud, Double maxSalud, Integer nivel, Boolean shinny, Nature naturaleza, Type tipo) {
         this.numPokedex = numPokedex;
         this.nombre = nombre;
         this.descripcionPokemon = descripcionPokemon;
-        this.salud = maxSalud;
+        this.salud = salud;
         this.maxSalud = maxSalud;
         this.nivel = nivel;
         this.shinny = shinny;
@@ -41,26 +45,38 @@ public class Pokemon implements iPokemon {
 
 //    Metodos
     public void cure(Item item) {
-        if (item.equals("POTION")) {
-            salud = salud + 100;
-        } else if (item.equals("FULL_RESTORE")) {
+        if (item.equals(Item.POTION)) {
+            if (salud + 100 > maxSalud) {
+                salud = maxSalud;
+            } else {
+                salud = salud + 100;
+            }
+            print(CURE_POKEMON);
+        } else if (item.equals(Item.FULL_RESTORE)) {
             salud = maxSalud;
+            print(CURE_POKEMON);
         } else {
             print(INCORRECT_ITEM);
         }
     }
 
     public void levelUp(Item item) {
-        if (item.equals("RARE_CANDY")) {
-            nivel = nivel + 1;
+        if (item.equals(Item.RARE_CANDY)) {
+            if (this.nivel != 100.00) {
+                this.nivel = this.getNivel() + 1;
+                print(LEVEL_UP);
+            } else {
+                print(NO_LEVEL_UP);
+            }
         } else {
             print(INCORRECT_ITEM);
         }
     }
 
     public void revive(Item item) {
-        if (item.equals("REVIVE")) {
+        if (item.equals(Item.REVIVE)) {
             salud = maxSalud;
+            print(REVIVE);
         } else {
             print(INCORRECT_ITEM);
         }
@@ -78,7 +94,11 @@ public class Pokemon implements iPokemon {
         return nivel;
     }
 
-    //    Funciones
+    public Double getSalud() {
+        return salud;
+    }
+
+//    Funciones
     private static void print(String frase) {
         System.out.println(frase);
     }
@@ -94,7 +114,4 @@ public class Pokemon implements iPokemon {
                 "Nivel        : " + nivel + "\n" +
                 "===========================";
     }
-
-
-
 }

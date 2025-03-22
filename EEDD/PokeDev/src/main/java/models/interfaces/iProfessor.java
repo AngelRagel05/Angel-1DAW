@@ -5,7 +5,7 @@ import models.Trainer;
 
 public interface iProfessor {
 
-    void deliverStarterPokemon (Trainer trainer);
+    void deliverStarterPokemon (Trainer trainer, Integer opc);
 
-    void researchPokemon (Pokemon pokemon);
+    String researchPokemon (Pokemon pokemon);
 }

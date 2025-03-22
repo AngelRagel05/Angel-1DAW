@@ -1,7 +1,6 @@
 package models.abstracts;
 
-public abstract  class Person {
-// PREGUBTAR METODO ABSATRACTO
+public abstract class Person {
 //    Atributos
     protected String nombre;
 

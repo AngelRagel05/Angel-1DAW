@@ -1,6 +1,8 @@
 package models;
 
-public class Medal {
+import models.interfaces.iMedal;
+
+public class Medal implements iMedal {
 
 //    Atributos
     protected String nombre;
