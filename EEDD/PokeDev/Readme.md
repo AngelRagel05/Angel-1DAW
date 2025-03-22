@@ -78,6 +78,7 @@
         getNombre() String
         getTipo() Type
         getNivel() Integer
+        getSalud() Double
     }
 
     class iProfessor {
@@ -100,6 +101,7 @@
         addPokemon() void 
         combatTrainer(Trainer rival, Trainer principal) boolean 
         capture(Item item) boolean 
+        getPokemons() List<Pokemon>
     }
 
     %% Clases
