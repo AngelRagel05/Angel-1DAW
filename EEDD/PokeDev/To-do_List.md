@@ -45,4 +45,4 @@
 - PokemonTest ✅
 - ProfessorTest ✅
 - RegionTest ✅
-- TrainerTest
+- TrainerTest ✅
