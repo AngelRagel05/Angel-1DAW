@@ -43,6 +43,6 @@
 - GymTest 
 - MedalTest ✅
 - PokemonTest ✅
-- ProfessorTest 
+- ProfessorTest ✅
 - RegionTest ✅
 - TrainerTest
