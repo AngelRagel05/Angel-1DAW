@@ -6,6 +6,8 @@
 
 // let d = b++; 
 
+"use strict"
+
 let a = 1, b = 1;
 
 console.log (a)
