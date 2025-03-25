@@ -3,5 +3,4 @@
 
 "use strict"
 
-let res= (prompt ("¿Cuál es el nombre 'oficial' de JavaScript?") == "ECMAScript")? console.log("correcto") : console.log( "¿No lo sabes?"); 
-
+let res= (prompt ("¿Cuál es el nombre 'oficial' de JavaScript?") == "ECMAScript")? alert("Correcto") : alert("¿No lo sabes?"); 
