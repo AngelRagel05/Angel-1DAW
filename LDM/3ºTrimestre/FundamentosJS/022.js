@@ -8,17 +8,68 @@
 // PD. El código debería funcionar para cualquier n, no debe estar programado para valores fijos.
 // ¿Puedes hacerlo con los 3 tipos de bucle? Demuéstralo.
 
-let size = prompt("Introduzca el valor de n.")
-let cont;
+"use strict";
 
-for(let i = 1; i <= size; i++) {
-    for(let j = i; j <= size; j++) {
-        if(i % j == 0) {
-            cont++;    
+// El uso de sqrt hace que la optimización del código sea mayor
+// esa función lo que hace es la raiz cuadrada de (i) y si ese resultado por ejemplo sale 7
+// solo tenemos que comprobar del 1 al 7,
+
+let size = parseInt(prompt("Introduzca el valor de n:", "10"));
+
+if (!isNaN(size) && size >= 2) {
+    let primosFor = [];
+    let primosWhile = [];
+    let primosDoWhile = [];
+
+    // Bucle FOR
+    for (let i = 2; i <= size; i++) {
+        let esPrimo = true;
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j === 0) {
+                esPrimo = false;
+                break;
+            }
         }
-        
+        if (esPrimo) primosFor.push(i);
     }
-    if(cont == 2) {
-        alert(i)
+
+    // Bucle WHILE
+    let i = 2;
+    while (i <= size) {
+        let esPrimo = true;
+        let j = 2;
+        while (j <= Math.sqrt(i)) {
+            if (i % j === 0) {
+                esPrimo = false;
+                break;
+            }
+            j++;
+        }
+        if (esPrimo) primosWhile.push(i);
+        i++;
     }
+
+    // Bucle DO...WHILE
+    i = 2;
+    do {
+        let esPrimo = true;
+        let j = 2;
+        do {
+            if (i % j === 0 && i !== j) {
+                esPrimo = false;
+                break;
+            }
+            j++;
+        } while (j <= Math.sqrt(i));
+        if (esPrimo) primosDoWhile.push(i);
+        i++;
+    } while (i <= size);
+
+    // Mostrar resultados
+    alert("Números primos usando FOR: " + primosFor.join(", "));
+    alert("Números primos usando WHILE: " + primosWhile.join(", "));
+    alert("Números primos usando DO...WHILE: " + primosDoWhile.join(", "));
+
+} else {
+    alert("Número inválido. Introduce un valor mayor o igual a 2.");
 }
