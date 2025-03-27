@@ -8,7 +8,7 @@ let i = 0;
 
 while(amount > 0) {
     let quotient = parseInt(amount/tickets[i]);
-    (amount % tickets[i] == 0) ? usedTickets[i] = quotient : 0;
+    usedTickets[i] = quotient;
     amount -= tickets[i] * (quotient);
     i++;
 }
