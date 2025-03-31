@@ -29,10 +29,10 @@ Ejemplo:
     typeof(firstName) // String
     typeof(lastName) // String
     typeof(country) // String
-    typeof(city) // String
-    typeof(age) // Integer -- Number
+    typeof(city) // String 
+    typeof(age) // Integer -- Number 🥚🥚
     typeof(isMarried) // Boolean
-    typeof(year) // Integer -- Number
+    typeof(year) // Integer -- Number 🥚🥚
     typeof(thisNull) // Object
     typeof(thisUndefined) // Undefined
     typeof(thisisnotanumber) // NaN
@@ -103,4 +103,4 @@ console.log("El año introducido no es biciesto.");
 ```
 
 
-Diria que teniendo 5 fallos en la lógica de comparaciones y lo de la 'p' en la palabra prompt, minimo un 8.5 tendria, yo me pondria un 9 sinceramnete.
+Diria que teniendo 5 fallos en la lógica de comparaciones y lo de la 'p' en la palabra prompt, minimo un 8.5 tendria, yo me pondria un 9.0 o 9.5 sinceramnete.
