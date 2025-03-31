@@ -69,8 +69,8 @@ null??undefined??0??" " // True -- 0
 "use strict"
 
 // Pido al usuario la base y la altura de su triángulo
-let base = promt("Ingresa la base de su triángulo.");
-let altura = promt("Ingresa la altura de su triángulo.");
+let base = prompt("Ingresa la base de su triángulo.");  // puse promt en vez de prompt 🥚🥚
+let altura = prompt("Ingresa la altura de su triángulo.");  // puse promt en vez de prompt 🥚🥚
 
 // Calculo el área
 let area = (base * altura) / 2;
@@ -88,7 +88,7 @@ Los años bisiestos son divisibles por cuatro (como 1984 y 2004). Sin embargo, l
 "use strict"
 
 // Le pido al usuario el año para averiguarlo
-let year = promt("Introduce el año que quiere saber si es o no biciesto.");
+let year = prompt("Introduce el año que quiere saber si es o no biciesto."); // puse promt en vez de prompt 🥚🥚
 
 // Averiguo si es o no biciesto y lo muestro por consola
 
@@ -101,3 +101,6 @@ let year = promt("Introduce el año que quiere saber si es o no biciesto.");
 (year % 4 == 0) ? console.log("El año introducido si es bisiesto.") : 
 console.log("El año introducido no es biciesto.");
 ```
+
+
+Diria que teniendo 5 fallos en la lógica de comparaciones y lo de la 'p' en la palabra prompt, minimo un 8.5 tendria, yo me pondria un 9 sinceramnete.
