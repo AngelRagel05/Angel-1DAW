@@ -10,39 +10,59 @@
 // MasterCard: Comienza con 51, 52, 53, 54 o 55, tiene 16 dígitos.
 // Debe devolver un String con el tipo de la tarjeta 💳 ✅, o "invalid" ❌ si no es una tarjeta válida
 
-let numberCard = prompt("Ingrese el número de la tarjeta:", "1111 1111 1111 1111");
-let arrayCardNumber = numberCard.split("");
+let suma = 0;
+let check = false;
+let card = "";
+
+while (!check) {
+
+    let numberCard = prompt("Ingrese el número de la tarjeta:", "1111 1111 1111 1111");
+    let cleanNumberCard = numberCard.replace(/\D/g, "");
+    let arrayCardNumber = cleanNumberCard.split("");
+
+    card = verifyAmericanExpress(arrayCardNumber) === 1 ? console.log("American Express 💳✅") :
+        card = verifyVisa(arrayCardNumber) === 1 ? console.log("Visa 💳✅") :
+            card = verifyMasterCard(arrayCardNumber) === 1 ? console.log("Master Card 💳✅") :
+                console.log("No se encuentra ninguna tarjeta válida.");
+
+}
+
+
+
 
 
 
 function verifyAmericanExpress(arrayCardNumber) {
-    arrayCardNumber[0] === 3 && (arrayCardNumber[1] === 4 || arrayCardNumber[1] === 7) ?
-        arrayCardNumber.length === 15 ? console.log("1") : console.log("0") :
-        console.log("0");
+    return arrayCardNumber[0] == 3 && (arrayCardNumber[1] == 4 || arrayCardNumber[1] == 7) ?
+        arrayCardNumber.length === 15 ? 1 : 0 :
+        0;
 }
 
 function verifyVisa(arrayCardNumber) {
-    arrayCardNumber[0] === 4 && (arrayCardNumber.length === 13 || arrayCardNumber.length === 16) ?
-        console.log("1") : console.log("0");
+    return arrayCardNumber[0] == 4 && (arrayCardNumber.length === 13 || arrayCardNumber.length === 16) ?
+        1 : 0;
 }
 
 function verifyMasterCard(arrayCardNumber) {
     let beginning = arrayCardNumber[0] + arrayCardNumber[1];
-    if (arrayCardNumber.length == 16) {
-        switch (beginning) {
-            case 51, 52, 53, 54, 55:
-                console.log("1");
-                break;
+    
+    if (arrayCardNumber.length === 16) {
+        switch (Number(beginning)) {
+            case 51:
+            case 52:
+            case 53:
+            case 54:
+            case 55:
+                return 1;
             default:
-                console.log("0");
-                break;
+                return 0;
         }
     } else {
-        console.log("0");
+        return 0;
     }
 }
 
-function verifyLuhn(arrayCardNumber) {
+function verifyLuhn(arrayCardNumber, suma) {
     for (let i = 0; i < arrayCardNumber.length; i++) {
         if (i % 2 == 0) {
             arrayCardNumber[i] = arrayCardNumber[i] * 2;
