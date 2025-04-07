@@ -10,32 +10,36 @@
 
 let selected = "";
 let check = false;
+let correct = 0;
+let maxCorrect = 0;
 
 while (!check) {
     selected = prompt("Introduce cara o cruz. Escriba SALIR para salir del programa.").toLocaleLowerCase();
     switch (selected) {
         case "cara":
         case "cruz":
-            correctChoose(selected, randomChoose());
+            if (selected === randomChoose()) {
+                correct++;
+                console.log("Has acertado. ✅");
+                
+                if (maxCorrect < correct) {
+                    maxCorrect = correct;
+                }
+
+            } else {
+                console.log("Has fallado. ❌");
+                correct = 0;
+            }
+            
             break;
         case "salir":
+            console.log("El máximo de aciertos es de: " + maxCorrect + ".");
             check = true;
             break;
 
         default:
             alert("Opción no válida.");
             break;
-    }
-}
-
-function correctChoose(selected, opcion) {
-    let correct = 0;
-    if (selected === opcion) {
-        correct++;
-        console.log(correct);
-
-    } else {
-        console.log("Has fallado.");
     }
 }
 
