@@ -14,23 +14,31 @@ let suma = 0;
 let check = false;
 let card = "";
 
+
 while (!check) {
 
     let numberCard = prompt("Ingrese el número de la tarjeta:", "1111 1111 1111 1111");
     let cleanNumberCard = numberCard.replace(/\D/g, "");
     let arrayCardNumber = cleanNumberCard.split("");
 
-    card = verifyAmericanExpress(arrayCardNumber) === 1 ? console.log("American Express 💳✅") :
-        card = verifyVisa(arrayCardNumber) === 1 ? console.log("Visa 💳✅") :
-            card = verifyMasterCard(arrayCardNumber) === 1 ? console.log("Master Card 💳✅") :
-                console.log("No se encuentra ninguna tarjeta válida.");
+    card = verifyAmericanExpress(arrayCardNumber) === 1 ?
+        "American Express 💳" :
+        verifyVisa(arrayCardNumber) === 1 ?
+            "Visa 💳" :
+            verifyMasterCard(arrayCardNumber) === 1 ?
+                "Master Card 💳" : "";
 
+    card === "" ? alert("❌ No es una tarjeta válida (debe ser Visa, MasterCard o American Express). Intenta de nuevo.") :
+        console.log(`${card} detectada ✅`);
+
+    if (card !== "") {
+        if (verifyLuhn(arrayCardNumber, suma) === true) {
+            console.log(`${card} válida (Luhn correcto) ✅✅`);
+            
+            check = true;
+        }
+    }
 }
-
-
-
-
-
 
 function verifyAmericanExpress(arrayCardNumber) {
     return arrayCardNumber[0] == 3 && (arrayCardNumber[1] == 4 || arrayCardNumber[1] == 7) ?
@@ -45,7 +53,7 @@ function verifyVisa(arrayCardNumber) {
 
 function verifyMasterCard(arrayCardNumber) {
     let beginning = arrayCardNumber[0] + arrayCardNumber[1];
-    
+
     if (arrayCardNumber.length === 16) {
         switch (Number(beginning)) {
             case 51:
@@ -79,7 +87,7 @@ function verifyLuhn(arrayCardNumber, suma) {
         suma = suma + Number(arrayCardNumber[i]);
     }
 
-    if (suma % 10 == 0) {
+    if (suma % 10 === 0) {
         return true;
     } else {
         return false;
