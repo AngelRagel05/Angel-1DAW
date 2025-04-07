@@ -14,7 +14,6 @@ let suma = 0;
 let check = false;
 let card = "";
 
-
 while (!check) {
 
     let numberCard = prompt("Ingrese el número de la tarjeta:", "1111 1111 1111 1111");
