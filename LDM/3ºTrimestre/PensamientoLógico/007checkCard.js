@@ -17,28 +17,28 @@ let arrayCardNumber = numberCard.split("");
 
 function verifyAmericanExpress(arrayCardNumber) {
     arrayCardNumber[0] === 3 && (arrayCardNumber[1] === 4 || arrayCardNumber[1] === 7) ?
-        arrayCardNumber.length === 15 ? console.log("American Express. 💳✅") : console.log("Invalid. ❌") :
-        console.log("Invalid. ❌");
+        arrayCardNumber.length === 15 ? console.log("1") : console.log("0") :
+        console.log("0");
 }
 
 function verifyVisa(arrayCardNumber) {
     arrayCardNumber[0] === 4 && (arrayCardNumber.length === 13 || arrayCardNumber.length === 16) ?
-        console.log("Visa. 💳✅") : console.log("Invalid. ❌");
+        console.log("1") : console.log("0");
 }
 
 function verifyMasterCard(arrayCardNumber) {
     let beginning = arrayCardNumber[0] + arrayCardNumber[1];
-    if (arrayCardNumber.length === 16) {
+    if (arrayCardNumber.length == 16) {
         switch (beginning) {
             case 51, 52, 53, 54, 55:
-                console.log("Master Card. 💳✅");
+                console.log("1");
                 break;
             default:
-                console.log("Invalid. ❌");
+                console.log("0");
                 break;
         }
     } else {
-        console.log("Invalid. ❌");
+        console.log("0");
     }
 }
 
