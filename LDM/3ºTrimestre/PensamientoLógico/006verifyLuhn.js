@@ -14,8 +14,6 @@ let suma = 0;
 let arrayCardNumber = cardNumber.split("");
 verifyNumber(arrayCardNumber);
 
-
-
 function getCardNumber() {
     while (true) {
         let cardNumber = prompt("Introduce el número de su tarjeta con el siguiente formato XXXX-XXXX-XXXX-XXXX", "4012-8888-8888-1881");
@@ -23,7 +21,7 @@ function getCardNumber() {
         // El regex está pedido al ChatGPT quita los guiones entre los números
         const cleanCardNumber = cardNumber.replace(/\D/g, "");
 
-        if (cleanCardNumber.length === 16) {
+        if (cleanCardNumber.length === 16) { //tamaños
             return cleanCardNumber;
         } else {
             alert("Por favor, introduce un número de tarjeta válido con 16 dígitos.");
@@ -53,8 +51,4 @@ function verifyNumber (arrayCardNumber) {
     } else {
         console.log("El número no es válido. ❌");
     }
-}
-
-function print(msg) {
-    console.log(msg);
 }

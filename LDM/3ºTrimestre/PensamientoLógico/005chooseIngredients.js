@@ -17,14 +17,14 @@ let ingredients = +prompt("Introduce cuántos ingredientes tienes (del 0 al 5):"
 switch (ingredients) {
     case 5:
         print(LIST_5_INGREDIENTS);
-        break
+        break;
     case 4:
         print(LIST_4_INGREDIENTS);
         ingredients = 3;
     case 3:
         print(LIST_3_INGREDIENTS);
         ingredients = 2;
-    case 2:
+    case 3,2:
         print(LIST_2_INGREDIENTS);
         break;
     default:
