@@ -22,3 +22,22 @@
 // El programa termina cuando o la jugador/a o el monstruo se quedan con vida igual o menor a 0
 // Mostrar un mensaje con el resultado final
 
+const ATTACK = "El jugador ataqua al monstruo.";
+const DRINK_POTION = "El jugador se toma una poción.";
+const SEARCH_POTION = "El jugador busca alguna poción.";
+const EXIT = "Salir del juego.";
+
+let playerLife = 100;
+let monsterLife = 150;
+let potion = 5;
+const MAX_DAMAGE_PLAYER = 20;
+const MAX_DAMAGE_MONSTER = 20;
+const MAX_HEALING_POTION = 30;
+
+let opc = 0;
+
+function runGame () {
+    switch (opc) {
+
+    }
+}
