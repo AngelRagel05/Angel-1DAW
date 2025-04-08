@@ -36,30 +36,57 @@ const MAX_HEALING_POTION = 30;
 
 let opc = 0;
 
+runGame();
+
 function runGame() {
-    switch (opc) {
-        case 1:
-
-            break;
-
-        case 2:
-
-            break;
-
-        case 3:
-
-            break;
-
-        case 4:
-
-            break;
-
-        default:
-            
-            break;
+    while (playerLife > 0 || monsterLife > 0) {
+        showOption();
+        switch (opc) {
+            case 1:
+    
+                monsterAttack(MAX_DAMAGE_MONSTER, playerLife);
+                showLifeEntities(playerLife, monsterLife);
+                break;
+    
+            case 2:
+    
+                monsterAttack(MAX_DAMAGE_MONSTER, playerLife);
+                showLifeEntities(playerLife, monsterLife);
+                break;
+    
+            case 3:
+    
+                monsterAttack(MAX_DAMAGE_MONSTER, playerLife);
+                showLifeEntities(playerLife, monsterLife);
+                break;
+    
+            case 4:
+    
+                monsterAttack(MAX_DAMAGE_MONSTER, playerLife);
+                showLifeEntities(playerLife, monsterLife);
+                break;
+    
+            default:
+    
+                break;
+        }
     }
 }
 
 function showOption() {
+    console.log(ATTACK);
+    console.log(DRINK_POTION);
+    console.log(SEARCH_POTION);
+    console.log(EXIT);
+}
 
+function monsterAttack(MAX_DAMAGE_MONSTER, playerLife) {
+    let damage = Math.floor(Math.random() * MAX_DAMAGE_MONSTER) + 1;
+    playerLife -= damage;
+    console.log(`💥 El monstruo ataca y hace ${damage} de daño.`);
+}
+
+function showLifeEntities(playerLife, monsterLife) {
+    console.log("La vida del jugador es: " + playerLife);
+    console.log("La vida del monstruo es: " + monsterLife);
 }
