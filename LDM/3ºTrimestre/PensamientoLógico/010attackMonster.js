@@ -1,3 +1,5 @@
+"use strict"
+
 // 👾 Monstruo
 
 // Crear un juego de combate contra un monstruo. El juego debe contar con las siguientes variables:
@@ -19,3 +21,4 @@
 // Luego del ataque del monstruo, se debe mostrar la vida de ambos
 // El programa termina cuando o la jugador/a o el monstruo se quedan con vida igual o menor a 0
 // Mostrar un mensaje con el resultado final
+
