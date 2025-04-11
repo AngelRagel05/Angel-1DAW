@@ -1,25 +1,22 @@
 "use strict"
 
-// Crear un programa que permita ingresar una lista de 🐵(monos) y 🍌(bananas). Preguntar luego cuántas bananas come cada mono. Mostrar en un mensaje si hay suficientes bananas para cada mono. Ejemplo:
-// Ingresar monos y bananas: 🐵🍌🍌🍌🐵🍌🐵🍌
-// Cuántas bananas come cada mono?: en este caso 2 bananas , 2 bananas y 1 banana, es decir, no se comparten, pero todos se comen alguna.
-//o en caso de que no haya suficientes:
-// ¡Oh no!¡No hay suficientes bananas para los monos! 😭
-
+// Pedir al usuario que ingrese una lista de monos 🐵 y bananas 🍌.
 let entrada = prompt("Ingresa monos 🐵 y bananas 🍌:", "🐵🍌🍌🍌🐵🍌🐵🍌");
 
-// El /🐵/g es una expresion regular que busca directamente el emogi.
-// Uso el operador OR para que me devuleva siempre una array
+// La expresión regular /🐵/g busca todos los monos 🐵 en la cadena ingresada. Si no hay monos, devuelve un arreglo vacío.
 let monos = (entrada.match(/🐵/g || [])).length;
+
+// La expresión regular /🍌/g busca todas las bananas 🍌 en la cadena ingresada. Si no hay bananas, devuelve un arreglo vacío.
 let bananas = (entrada.match(/🍌/g || [])).length;
 
+// Verificar si no hay monos en la lista.
 if (monos === 0) {
     alert("No hay monos en la lista. No se puede alimentar a ninguno 🧐");
 
-} else if (bananas >= monos) {
-    let cantBananas = Math.floor(bananas / monos);
+} else if (bananas >= monos) { // Si hay suficientes bananas para cada mono.
+    let cantBananas = Math.floor(bananas / monos); // Calculamos cuántas bananas le tocan a cada mono.
     alert(`Cada mono come ${cantBananas} ${cantBananas === 1 ? "banana" : "bananas"} 🍌`);
 
-} else {
-    alert ("¡Oh no! ¡No hay suficientes bananas para los monos! 😭")
+} else { // Si no hay suficientes bananas para todos los monos.
+    alert("¡Oh no! ¡No hay suficientes bananas para los monos! 😭")
 }
