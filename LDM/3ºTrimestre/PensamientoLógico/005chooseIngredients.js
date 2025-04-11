@@ -1,37 +1,39 @@
 "use strict"
 
-// Crear un programa que pregunte por separado si tiene 5 ingredientes. Según los ingredientes que tenga, mostrar 
-// un mensaje con todas las comidas que puede cocinar. Debe haber opciones para 5, 4, 3 y 2 ingredientes. Para cada 
-// cantidad, debe haber al menos 2 comidas/recetas posibles (excepto para la de 5). Se deben mostrar todas las 
-// posibles, incluyendo las que requieran menos ingredientes que las que se tienen (por ejemplo, si se tienen 4 
-// ingredientes, se pueden hacer las de 3 y 2). Si no hay ninguna que pueda hacerse también debe mostrarse un mensaje.
-
+// Definir las recetas posibles según la cantidad de ingredientes.
 const LIST_5_INGREDIENTS = "🍕 Con todos los ingredientes, puedes hacer: Pizza casera.";
 const LIST_4_INGREDIENTS = "🥗 Puedes preparar: Ensalada completa y Arroz con pollo.";
 const LIST_3_INGREDIENTS = "🍝 Además puedes cocinar: Huevos revueltos con jamón y Pasta con queso.";
 const LIST_2_INGREDIENTS = "🥚 Y con lo más básico, puedes hacer: Tortilla francesa y Sándwich de jamón.";
 const NO_RECIPES = "🛑 No puedes cocinar ninguna receta con esos ingredientes.";
 
+// Solicitar al usuario la cantidad de ingredientes.
 let ingredients = +prompt("Introduce cuántos ingredientes tienes (del 0 al 5):", 5);
 
+// Usar un switch para manejar las distintas cantidades de ingredientes y mostrar las recetas posibles.
 switch (ingredients) {
     case 5:
+        // Si tiene 5 ingredientes, mostrar la receta con todos los ingredientes.
         print(LIST_5_INGREDIENTS);
         break;
     case 4:
+        // Si tiene 4 ingredientes, mostrar las recetas de 4 ingredientes y luego las de 3 y 2 ingredientes.
         print(LIST_4_INGREDIENTS);
-        ingredients = 3;
+        // Procedemos a mostrar también las recetas para 3 ingredientes.
+        // No hace falta un break aquí porque ya pasaremos al siguiente caso de 3.
     case 3:
         print(LIST_3_INGREDIENTS);
-        ingredients = 2;
-    case 3,2:
+        // Procedemos a mostrar también las recetas para 2 ingredientes.
+    case 2:
         print(LIST_2_INGREDIENTS);
         break;
     default:
-        print(NO_RECIPES)
+        // Si el número de ingredientes no está entre 0 y 5, mostrar que no hay recetas posibles.
+        print(NO_RECIPES);
         break;
 }
 
+// Función para imprimir el mensaje en consola.
 function print(msg) {
     console.log(msg);
 }
