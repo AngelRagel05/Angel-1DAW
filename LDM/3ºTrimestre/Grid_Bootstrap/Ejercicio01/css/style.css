@@ -1,0 +1,52 @@
+:root {
+    --bg-yellow: #ffbf08;
+    --bg-gray: #6d747d;
+    --bg-black: #1e2627;
+    --bg-white: #f7faf9;
+    --bg-blue: #0c6efc;
+    --bg-pinky: #ffc0cb;
+    --bg-purple: #dd9fe2;
+    --bg-wine: #81007e;
+    --bg-dirtLake: #6395ec;
+    --bg-ocean: #01ced1;
+}
+
+.bg-yellow {
+    background-color: var(--bg-yellow);
+}
+
+.bg-gray {
+    background-color: var(--bg-gray);
+}
+
+.bg-black {
+    background-color: var(--bg-black);
+}
+
+.bg-white {
+    background-color: var(--bg-white);
+}
+
+.bg-blue {
+    background-color: var(--bg-blue);
+}
+
+.bg-pinky {
+    background-color: var(--bg-pinky);
+}
+
+.bg-purple {
+    background-color: var(--bg-purple);
+}
+
+.bg-wine {
+    background-color: var(--bg-wine);
+}
+
+.bg-dirtLake {
+    background-color: var(--bg-dirtLake);
+}
+
+.bg-ocean {
+    background-color: var(--bg-ocean);
+}
