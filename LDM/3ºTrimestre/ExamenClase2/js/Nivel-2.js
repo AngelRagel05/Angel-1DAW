@@ -75,12 +75,14 @@ function categoriasDisponibles(productos) {
     return setCategoria;
 }
 
+// Creo la varita
 let varitaLiteral = {
     nombre: "Bartolomeo",
     poder: "Fuego",
     nivel: 6
 };
 
+// creo al función 
 function crearPocion (nombre, efecto, cantidad) {
     return {
         nombre: nombre,
@@ -89,6 +91,7 @@ function crearPocion (nombre, efecto, cantidad) {
     };
 }
 
+// Creo la funcion para crear el objeto
 function Artefacto (nombre, material, rareza) {
     this.nombre = nombre;
     this.material = material;
@@ -100,9 +103,11 @@ function Artefacto (nombre, material, rareza) {
     }
 }
 
+// Creo los objetos
 let artefacto1 = new Artefacto("Orbe de Luz", "Cristal", "raro");
 let artefacto2 = new Artefacto("Daga Sombría", "Acero negro", "épico");
 
+// Creo la clase Reliquia
 class Reliquia {
     constructor (nombre, origen, nivelMagico) {
         this.nombre = nombre;
@@ -116,19 +121,24 @@ class Reliquia {
     }
 }
 
+// Creo una reliquia
 let reliquia1 =new Reliquia("Corona de los antiguos", "Atlántida", 7);
 
+// Creo la baseMagica
 let baseMagica = {
     activar() {
         return `Activando ${this.nombre}...`
     }
 }
 
+// Creo un amuleto
 let amuleto = Object.create(baseMagica);
 
+// añado el nombre y el poder
 amuleto.nombre = "Amuleto del Alba";
 amuleto.poder = "Luz Sagrada";
 
+// Creo la array y añado los objetos
 let bestiario = [
     varitaLiteral,
     pocion1,
@@ -139,3 +149,10 @@ let bestiario = [
     amuleto
 ]
 
+let mapaObjetos = new Map();
+
+bestiario.forEach(obj => {
+    if (obj.nombre) {
+        mapaObjetos.set(obj.nombre, obj);
+    }
+})
