@@ -103,7 +103,19 @@ function Artefacto (nombre, material, rareza) {
 let artefacto1 = new Artefacto("Orbe de Luz", "Cristal", "raro");
 let artefacto2 = new Artefacto("Daga Sombría", "Acero negro", "épico");
 
+class Reliquia {
+    constructor (nombre, origen, nivelMagico) {
+        this.nombre = nombre;
+        this.origen = origen;
+        this.nivelMagico = nivelMagico;
+    }
 
+    toString() {
+        let frase = `Reliquia ${this.nombre} de origen ${this.origen}, nivel mágico: ${this.nivelMagico}`;
+        return frase;
+    }
+}
 
+let reliquia1 =new Reliquia("Corona de los antiguos", "Atlántida", 7);
 
 
