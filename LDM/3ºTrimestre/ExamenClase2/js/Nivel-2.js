@@ -100,5 +100,7 @@ function Artefacto (nombre, material, rareza) {
     }
 }
 
+let artefacto
+
 
 
