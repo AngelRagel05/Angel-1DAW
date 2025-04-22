@@ -25,10 +25,13 @@ function grupoPorCategoria(productos) {
     // Declaro el Map
     let map = new Map();
 
+    // Recorro productos 
     productos.forEach(producto => {
+        // Si el map no tiene la categoria meto la array vacia
         if (!map.has(producto.categoria)) {
             map.set(producto.categoria, []);
         }
+        // accedo a la array y añado el producto
         map.get(producto.categoria).push(producto);
     });
 
@@ -37,16 +40,23 @@ function grupoPorCategoria(productos) {
 
 function descontarCategoria(productos, categoria, porcentaje) {
     // Declaro la array
-    let arrayDescuento = new Array();
+    let arrayDescuento = [];
 
-    for (let i = 0; i < productos.length; i++) {
+    // Recorro productos
+    productos.forEach(producto => {
+        // si el producto tiene la misma categoria que la dada
+        if (producto.categoria === categoria) {
 
-        // Calculo el precio
-        let descuento = productos[i].precio * (100 - porcentaje);
+            // Copio el objeto
+            let productoDescontado = { ...producto };
 
-        // lo añado a la array
-        arrayDescuento.unshift(descuento);
-    }
+            // calculo el nuevo precio
+            productoDescontado.precio = parseFloat(producto.precio * (1 - porcentaje / 100));
+
+            // Añado el precio actualizado
+            arrayDescuento.push(productoDescontado);
+        }
+    });
 
     // retorno el array
     return arrayDescuento;
