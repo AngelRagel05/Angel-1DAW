@@ -118,4 +118,13 @@ class Reliquia {
 
 let reliquia1 =new Reliquia("Corona de los antiguos", "Atlántida", 7);
 
+let baseMagica = {
+    activar() {
+        return `Activando ${this.nombre}...`
+    }
+}
 
+let amuleto = Object.create(baseMagica);
+
+amuleto.nombre = "Amuleto del Alba";
+amuleto.poder = "Luz Sagrada";
