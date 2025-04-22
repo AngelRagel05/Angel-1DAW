@@ -2,26 +2,26 @@
 
 let productos = [
     { id: 1, categoria: "bebida", precio: 1.5, cantidad: 100 },
-    { id: 2, categoria: "comida",   precio: 3.2, cantidad: 52 },
+    { id: 2, categoria: "comida", precio: 3.2, cantidad: 52 },
     { id: 3, categoria: "bebida", precio: 2.0, cantidad: 80 },
-    { id: 4, categoria: "bebida", precio: 1.59, cantidad:  96 },
-    { id: 5, categoria: "hogar", precio: 5.99, cantidad:  12 }
-  ];
+    { id: 4, categoria: "bebida", precio: 1.59, cantidad: 96 },
+    { id: 5, categoria: "hogar", precio: 5.99, cantidad: 12 }
+];
 
-  function calcularValorInventario(productos) {
+function calcularValorInventario(productos) {
     // Declaro variable
     let valorTotal = 0;
-    
+
     // Recorro el array sumando los precios
     productos.forEach(producto => {
         valorTotal = valorTotal + (producto.precio * producto.cantidad);
     });
-  
+
     // retorno el valorTotal
     return valorTotal;
-  }
+}
 
-  function grupoPorCategoria(productos) {
+function grupoPorCategoria(productos) {
     // Declaro el Map
     let map = new Map();
 
@@ -33,4 +33,21 @@ let productos = [
     });
 
     return map;
-  }
+}
+
+function descontarCategoria(productos, categoria, porcentaje) {
+    // Declaro la array
+    let arrayDescuento = new Array();
+
+    for (let i = 0; i < productos.length; i++) {
+
+        // Calculo el precio
+        let descuento = productos[i].precio * (100 - porcentaje);
+
+        // lo añado a la array
+        arrayDescuento.unshift(descuento);
+    }
+
+    // retorno el array
+    return arrayDescuento;
+}
