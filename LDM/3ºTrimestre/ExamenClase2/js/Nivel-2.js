@@ -61,3 +61,44 @@ function descontarCategoria(productos, categoria, porcentaje) {
     // retorno el array
     return arrayDescuento;
 }
+
+function categoriasDisponibles(productos) {
+    // Declaro el Set
+    let setCategoria = new Set();
+
+    // Voy añadiendo la cateogria en el set
+    productos.forEach(producto => {
+        setCategoria.add(producto.categoria);
+    });
+
+    // Retorno el set
+    return setCategoria;
+}
+
+let vaitaLiteral = {
+    nombre: "Bartolomeo",
+    poder: "Fuego",
+    nivel: 6
+};
+
+function crearPocion (nombre, efecto, cantidad) {
+    return {
+        nombre: nombre,
+        efecto: efecto,
+        cantidad: cantidad
+    };
+}
+
+function Artefacto (nombre, material, rareza) {
+    this.nombre = nombre;
+    this.material = material;
+    this.rareza = rareza;
+
+    this.descripcion = function() {
+        let frase = `Artefacto: ${this.nombre} (material: ${this.material}, rareza: ${this.rareza})`;
+        return frase;
+    }
+}
+
+
+
