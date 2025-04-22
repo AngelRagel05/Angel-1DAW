@@ -134,10 +134,6 @@ let baseMagica = {
     }
 }
 
-// ITV 
-// PAPELES MOTO
-// TOPE MOTO
-
 // Creo un amuleto
 let amuleto = Object.create(baseMagica);
 
