@@ -100,7 +100,10 @@ function Artefacto (nombre, material, rareza) {
     }
 }
 
-let artefacto
+let artefacto1 = new Artefacto("Orbe de Luz", "Cristal", "raro");
+let artefacto2 = new Artefacto("Daga Sombría", "Acero negro", "épico");
+
+
 
 
 
