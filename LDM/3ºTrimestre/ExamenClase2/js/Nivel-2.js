@@ -75,7 +75,7 @@ function categoriasDisponibles(productos) {
     return setCategoria;
 }
 
-let vaitaLiteral = {
+let varitaLiteral = {
     nombre: "Bartolomeo",
     poder: "Fuego",
     nivel: 6
@@ -128,3 +128,14 @@ let amuleto = Object.create(baseMagica);
 
 amuleto.nombre = "Amuleto del Alba";
 amuleto.poder = "Luz Sagrada";
+
+let bestiario = [
+    varitaLiteral,
+    pocion1,
+    pocion2,
+    artefacto1,
+    artefacto2,
+    reliquia1,
+    amuleto
+]
+
