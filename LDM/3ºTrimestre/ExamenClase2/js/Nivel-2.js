@@ -91,6 +91,9 @@ function crearPocion (nombre, efecto, cantidad) {
     };
 }
 
+let pocion1 = crearPocion("Curación", "Recupera vida", 3);
+let pocion2 = crearPocion("Invisibilidad", "Te oculta", 1);
+
 // Creo la funcion para crear el objeto
 function Artefacto (nombre, material, rareza) {
     this.nombre = nombre;
@@ -122,7 +125,7 @@ class Reliquia {
 }
 
 // Creo una reliquia
-let reliquia1 =new Reliquia("Corona de los antiguos", "Atlántida", 7);
+let reliquia1 = new Reliquia("Corona de los antiguos", "Atlántida", 7);
 
 // Creo la baseMagica
 let baseMagica = {
@@ -130,6 +133,10 @@ let baseMagica = {
         return `Activando ${this.nombre}...`
     }
 }
+
+// ITV 
+// PAPELES MOTO
+// TOPE MOTO
 
 // Creo un amuleto
 let amuleto = Object.create(baseMagica);
@@ -149,10 +156,32 @@ let bestiario = [
     amuleto
 ]
 
+// Creo el mapa
 let mapaObjetos = new Map();
 
 bestiario.forEach(obj => {
     if (obj.nombre) {
         mapaObjetos.set(obj.nombre, obj);
     }
-})
+});
+
+let niveles = new Set();
+
+bestiario.forEach(obj => {
+    if (obj.nivel !== undefined) niveles.add(obj.nivel);
+    if (obj.nivelMagico !== undefined) niveles.add(obj.nivelMagico);
+    if (obj.rareza !== undefined) niveles.add(obj.rareza);
+});
+
+// 5. Mostrar en consola con que he ido creando / instanciando los objetos
+console.log("📜 Bestiario mágico:");
+bestiario.forEach(obj => {
+  let tipo = "desconocido";
+  if (obj === varitaLiteral) tipo = "objeto literal";
+  else if (obj === pocion1 || obj === pocion2) tipo = "función fábrica";
+  else if (obj instanceof Artefacto) tipo = "constructor clásico";
+  else if (obj instanceof Reliquia) tipo = "clase";
+  else if (obj === amuleto) tipo = "Object.create";
+
+  console.log(`- ${obj.nombre} → creado con: ${tipo}`);
+});
