@@ -127,8 +127,8 @@
 
             <!-- PAÍS -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                <label for="Pais">País *</label>
-                <select name="Pais" id="Pais">
+                <label for="Pais" class="form-label">País *</label>
+                <select name="Pais" class="form-select" id="Pais" required>
                     <option selected disabled>Selecciona un país</option>
                     <option value="España">España</option>
                     <option value="Portugal">Portugal</option>
@@ -141,26 +141,27 @@
             <!-- BIOGRAFÍA -->
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <label for="Biografia">Biografía</label>
-                <textarea name="Biografia" id="Biografia"></textarea>
+                <textarea class="form-control" rows="3" maxlength="500" name="Biografia" id="Biografia"></textarea>
                 <div class="form-text">Máx. 500 caracteres.</div>
             </div>
 
             <!-- SUELDO ASPIRACIONAL -->
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <label for="SueldoAspiracional" class="form-label">Sueldo aspiracional (€) *</label>
-                <input type="range" class="form-range" id="SueldoAspiracional" name="SueldoAspiracional" min="0"
-                    max="10000" required>
+                <input type="range" class="form-range" id="SueldoAspiracional" name="SueldoAspiracional" min="1000"
+                    step="500" max="10000" required>
                 <div class="invalid-feedback">Selecciona tu rango salarial.</div>
             </div>
 
             <!-- CV -->
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <label for="CV">CV (PDF) *</label>
                 <input type="file" name="CV" id="CV" class="form-control" accept=".pdf" required>
+                <div class="invalid-feedback">Adjunta un PDF.</div>
             </div>
 
             <!-- ENVÍO -->
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <button class="btn btn-primary" type="submit">Registrarse</button>
             </div>
         </form>
