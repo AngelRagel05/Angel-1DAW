@@ -147,13 +147,14 @@
             <!-- SUELDO ASPIRACIONAL -->
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <label for="SueldoAspiracional">Sueldo aspiracional (€) *</label> <br>
-                <input type="range" id="SueldoAspiracional" name="SueldoAspiracional" min="0" max="10000"> <br>
+                <input type="range" id="SueldoAspiracional" name="SueldoAspiracional" min="0" max="10000" required> <br>
+                <div class="invalid-feedback">Selecciona tu rango salarial.</div>
             </div>
 
             <!-- CV -->
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <label for="CV">CV (PDF) *</label> <br>
-                <input type="file" name="CV" id="CV"><br>
+                <input type="file" name="CV" id="CV" class="form-control" accept=".PDF" required><br>
             </div>
 
             <!-- ENVÍO -->
