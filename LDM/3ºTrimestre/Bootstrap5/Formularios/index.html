@@ -17,6 +17,7 @@
 
     <main class="container py-4">
         <form class="row g-3 needs-validation" novalidate>
+
             <!-- NOMBRE COMPLETO -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <label for="nombre" class="form-label">Nombre completo *</label>
@@ -165,6 +166,32 @@
     <footer>
 
     </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (() => {
+            const form = document.getElementById('formRegistro');
+
+            form.addEventListener('submit', e => {
+                // 1) Validación nativa de Bootstrap
+                if (!form.checkValidity()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+
+                // 2) Comprobamos que las contraseñas coincidan
+                const p1 = document.getElementById('password1');
+                const p2 = document.getElementById('password2');
+                p2.setCustomValidity(p1.value === p2.value ? '' : 'no-match');
+
+                // 3) Al menos un hobby
+                const anyHobby = form.querySelectorAll('input[name="hobbies"]:checked').length > 0;
+                document.getElementById('hobbyFeedback').style.display = anyHobby ? 'none' : 'block';
+                if (!anyHobby) { e.preventDefault(); e.stopPropagation(); }
+
+                form.classList.add('was-validated');
+            });
+        })();
+    </script>
 </body>
 
 </html>
