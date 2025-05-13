@@ -106,26 +106,36 @@
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <label for="Hobbies" class="form-label d-block">Hobbies *</label><br>
 
-                <input type="checkbox" id="Hobbies" name="Hobbies" value="Lectura">
-                <label for="Lectura">Lectura</label><br>
+                <div class="form-check">
+                    <input type="checkbox" id="Hobbies" name="Hobbies" value="Lectura">
+                    <label for="Lectura">Lectura</label><br>
+                </div>
 
-                <input type="checkbox" id="Genero" name="Genero" value="Deporte">
-                <label for="Deporte">Deporte</label><br>
+                <div class="form-check">
+                    <input type="checkbox" id="Genero" name="Genero" value="Deporte">
+                    <label for="Deporte">Deporte</label><br>
+                </div>
 
-                <input type="checkbox" id="Genero" name="Genero" value="Musica">
-                <label for="Musica">Música</label><br>
+                <div class="form-check">
+                    <input type="checkbox" id="Genero" name="Genero" value="Musica">
+                    <label for="Musica">Música</label><br>
+                </div>
+
+                <div id="hobbyFeedback" class="invalid-feedback d-block">Marca al menos un hobby.</div>F
             </div>
 
             <!-- PAÍS -->
-            <label for="Pais">País *</label><br>
-            <select name="Pais" id="Pais">
-                <option selected disabled>Selecciona un país</option>
-                <option value="España">España</option>
-                <option value="Portugal">Portugal</option>
-                <option value="Belgica">Belgica</option>
-                <option value="Brazil">Brazil</option>
-                <option value="Argentina">Argentina</option>
-            </select> <br>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <label for="Pais">País *</label><br>
+                <select name="Pais" id="Pais">
+                    <option selected disabled>Selecciona un país</option>
+                    <option value="España">España</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Belgica">Belgica</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Argentina">Argentina</option>
+                </select> <br>
+            </div>
 
             <!-- BIOGRAFÍA -->
             <label for="Biografia">Biografía</label> <br>
