@@ -83,21 +83,21 @@
 
             <!-- GÉNERO -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                <label for="Genero" class="col-form-label pt-0">Género *</label><br>
+                <label for="Genero" class="col-form-label pt-0">Género *</label>
 
                 <div class="form-check">
                     <input type="radio" id="Genero" name="Genero" value="Hombre">
-                    <label for="Hombre">Hombre</label><br>
+                    <label for="Hombre">Hombre</label>
                 </div>
 
                 <div class="form-check">
                     <input type="radio" id="Genero" name="Genero" value="Mujer">
-                    <label for="Mujer">Mujer</label><br>
+                    <label for="Mujer">Mujer</label>
                 </div>
 
                 <div class="form-check">
                     <input type="radio" id="Genero" name="Genero" value="Otro">
-                    <label for="Otro">Otro</label><br>
+                    <label for="Otro">Otro</label>
                 </div>
 
                 <div class="invalid-feedback d-block">Selecciona una opción.</div>
@@ -105,29 +105,29 @@
 
             <!-- HOBBIES -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                <label for="Hobbies" class="form-label d-block">Hobbies *</label><br>
+                <label for="Hobbies" class="form-label d-block">Hobbies *</label>
 
                 <div class="form-check">
                     <input type="checkbox" id="Hobbies" name="Hobbies" value="Lectura">
-                    <label for="Lectura">Lectura</label><br>
+                    <label for="Lectura">Lectura</label>
                 </div>
 
                 <div class="form-check">
                     <input type="checkbox" id="Genero" name="Genero" value="Deporte">
-                    <label for="Deporte">Deporte</label><br>
+                    <label for="Deporte">Deporte</label>
                 </div>
 
                 <div class="form-check">
                     <input type="checkbox" id="Genero" name="Genero" value="Musica">
-                    <label for="Musica">Música</label><br>
+                    <label for="Musica">Música</label>
                 </div>
 
-                <div id="hobbyFeedback" class="invalid-feedback d-block">Marca al menos un hobby.</div>F
+                <div id="hobbyFeedback" class="invalid-feedback d-block">Marca al menos un hobby.</div>
             </div>
 
             <!-- PAÍS -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                <label for="Pais">País *</label><br>
+                <label for="Pais">País *</label>
                 <select name="Pais" id="Pais">
                     <option selected disabled>Selecciona un país</option>
                     <option value="España">España</option>
@@ -140,21 +140,23 @@
 
             <!-- BIOGRAFÍA -->
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                <label for="Biografia">Biografía</label> <br>
-                <textarea name="Biografia" id="Biografia"></textarea> <br>
+                <label for="Biografia">Biografía</label>
+                <textarea name="Biografia" id="Biografia"></textarea>
+                <div class="form-text">Máx. 500 caracteres.</div>
             </div>
 
             <!-- SUELDO ASPIRACIONAL -->
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                <label for="SueldoAspiracional">Sueldo aspiracional (€) *</label> <br>
-                <input type="range" id="SueldoAspiracional" name="SueldoAspiracional" min="0" max="10000" required> <br>
+                <label for="SueldoAspiracional" class="form-label">Sueldo aspiracional (€) *</label>
+                <input type="range" class="form-range" id="SueldoAspiracional" name="SueldoAspiracional" min="0"
+                    max="10000" required>
                 <div class="invalid-feedback">Selecciona tu rango salarial.</div>
             </div>
 
             <!-- CV -->
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                <label for="CV">CV (PDF) *</label> <br>
-                <input type="file" name="CV" id="CV" class="form-control" accept=".pdf" required><br>
+                <label for="CV">CV (PDF) *</label>
+                <input type="file" name="CV" id="CV" class="form-control" accept=".pdf" required>
             </div>
 
             <!-- ENVÍO -->
@@ -167,7 +169,7 @@
     <footer>
 
     </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         (() => {
             const form = document.getElementById('formRegistro');
