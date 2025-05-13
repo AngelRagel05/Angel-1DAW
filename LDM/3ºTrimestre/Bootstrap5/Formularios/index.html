@@ -15,8 +15,8 @@
         <h1>Registro de Usuario</h1>
     </header>
 
-    <main class="">
-        <form action="">
+    <main class="container py-4">
+        <form class="row g-3 needs-validation" novalidate>
             <!-- NOMBRE COMPLETO -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <label for="nombre" class="form-label">Nombre completo *</label>
@@ -138,17 +138,27 @@
             </div>
 
             <!-- BIOGRAFÍA -->
-            <label for="Biografia">Biografía</label> <br>
-            <textarea name="Biografia" id="Biografia"></textarea> <br>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <label for="Biografia">Biografía</label> <br>
+                <textarea name="Biografia" id="Biografia"></textarea> <br>
+            </div>
 
             <!-- SUELDO ASPIRACIONAL -->
-            <label for="SueldoAspiracional">Sueldo aspiracional (€) *</label> <br>
-            <input type="range" id="SueldoAspiracional" name="SueldoAspiracional" min="0" max="10000"> <br>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <label for="SueldoAspiracional">Sueldo aspiracional (€) *</label> <br>
+                <input type="range" id="SueldoAspiracional" name="SueldoAspiracional" min="0" max="10000"> <br>
+            </div>
 
             <!-- CV -->
-            <label for="CV">CV (PDF) *</label> <br>
-            <input type="file" name="CV" id="CV"><br>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <label for="CV">CV (PDF) *</label> <br>
+                <input type="file" name="CV" id="CV"><br>
+            </div>
 
+            <!-- ENVÍO -->
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <button class="btn btn-primary" type="submit">Registrarse</button>
+            </div>
         </form>
     </main>
 
