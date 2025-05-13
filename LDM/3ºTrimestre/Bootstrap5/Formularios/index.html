@@ -18,28 +18,47 @@
     <main class="">
         <form action="">
             <!-- NOMBRE COMPLETO -->
-            <label for="NombreCompleto">Nombre Completo *</label><br>
-            <input type="text" class="form-control form-control-lg" id="NombreCompleto" name="NombreCompleto"><br>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <label for="NombreCompleto">Nombre Completo *</label><br>
+                <input type="text" class="form-control form-control-lg" id="NombreCompleto" name="NombreCompleto"><br>
+            </div>
 
             <!-- MAIL -->
-            <label for="Email">Email *</label><br>
-            <input type="text" class="form-control form-control-lg" id="Email" name="Email"><br>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <label for="Email">Email *</label><br>
+                <input type="text" class="form-control form-control-lg" id="Email" name="Email"><br>
+            </div>
 
             <!-- CONTRASEÑA -->
-            <label for="Contraseña">Contraseña *</label><br>
-            <input type="password" class="form-control form-control-lg" id="Contraseña" name="Contraseña"><br>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <label for="Contraseña">Contraseña *</label><br>
+                <input type="password" class="form-control form-control-lg" id="Contraseña" name="Contraseña"><br>
+            </div>
 
             <!-- CONFIRMAR CONTRASEÑA -->
-            <label for="ConfirmarContraseña">Confirmar Contraseña *</label><br>
-            <input type="password" class="form-control form-control-lg" id="ConfirmarContraseña" name="ConfirmarContraseña"><br>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <label for="ConfirmarContraseña">Confirmar Contraseña *</label><br>
+                <input type="password" class="form-control form-control-lg" id="ConfirmarContraseña"
+                    name="ConfirmarContraseña"><br>
+            </div>
 
             <!-- EDAD -->
-            <label for="Edad">Edad *</label><br>
-            <input type="date" class="form-control form-control-lg" id="Edad" name="Edad"><br>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <label for="Edad">Edad *</label><br>
+                <input type="date" class="form-control form-control-lg" id="Edad" name="Edad"><br>
+            </div>
+
+            <!-- FECHA DE NACIMIENTO -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <label for="fechaNac" class="form-label">Fecha de nacimiento *</label>
+                <input type="date" class="form-control" id="fechaNac" name="fechaNac" required>
+                <div class="invalid-feedback">Introduce tu fecha de nacimiento.</div>
+            </div>
 
             <!-- TELÉFONO -->
             <label for="Telefono">Teléfono</label><br>
-            <input type="tel" class="form-control form-control-lg" id="Telefono" name="Telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><br>
+            <input type="tel" class="form-control form-control-lg" id="Telefono" name="Telefono"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><br>
 
             <!-- SITIO WEB -->
             <label for="SitioWeb">Sitio web</label><br>
