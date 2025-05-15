@@ -113,3 +113,22 @@ flowchart LR
  AL --> C11
 
 ```
+
+## 6. Matriz de Trazabilidad
+
+| **Req. ID** | **Descripción Req.**                          | **Objetivo(s)**   | **Caso de Uso**                  | **Caso de Prueba**         |
+|-------------|----------------------------------------------|-------------------|---------------------------------|----------------------------|
+| RF-01       | Registrar productos con atributos             | OBJ-01, OBJ-02    | C1 (Registrar productos)         | TP-01: Registro producto    |
+| RF-02       | Gestionar almacenes y ubicaciones internas    | OBJ-01, OBJ-02    | C2 (Gestionar almacenes y ubicaciones) | TP-02: Gestión almacenes    |
+| RF-03       | Controlar inventario en tiempo real            | OBJ-01, OBJ-02    | C3 (Controlar inventario)        | TP-03: Control stock        |
+| RF-04       | Ajustar inventario (recepciones, traslados)   | OBJ-01            | C4 (Ajustar inventario)          | TP-04: Ajuste inventario    |
+| RF-05       | Crear y gestionar órdenes de salida            | OBJ-01            | C5 (Crear y gestionar órdenes)   | TP-05: Gestión órdenes      |
+| RF-06       | Generar listados de picking con rutas optimizadas | OBJ-01        | C6 (Generar listados de picking) | TP-06: Picking optimizado   |
+| RF-07       | Confirmar preparación, embalaje y expedición  | OBJ-01            | C7 (Confirmar preparación y envío) | TP-07: Confirmación envío  |
+| RF-08       | Integrar con transportistas para etiquetas y seguimiento | OBJ-01      | C8 (Integrar con transportistas) | TP-08: Integración transportistas |
+| RF-09       | Gestionar alertas y notificaciones automáticas | OBJ-01            | C9 (Gestionar alertas y notificaciones) | TP-09: Alertas y notificaciones |
+| RF-10       | Ejecutar recuentos y validar discrepancias    | OBJ-01            | C10 (Ejecutar recuentos)         | TP-10: Recuentos inventario |
+| RF-11       | Generar informes y dashboards dinámicos       | OBJ-01, OBJ-04    | C11 (Generar informes y dashboards) | TP-11: Informes y análisis  |
+| RF-12       | Gestionar usuarios, roles y permisos           | OBJ-03            | C12 (Gestionar usuarios, roles y permisos) | TP-12: Gestión usuarios    |
+| RF-13       | Auditoría y seguridad de acciones críticas    | OBJ-03            | C13 (Auditoría y seguridad)      | TP-13: Auditoría y seguridad|
+
