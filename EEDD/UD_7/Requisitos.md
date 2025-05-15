@@ -35,7 +35,6 @@ La aplicación contará con control de versiones para borradores, publicación i
 ## 4. Requisitos No Funcionales 
 
 | **ID** | **Descripción**                    | **Categoría**  | **Métrica**         | **Nivel Objetivo**  | **Comentarios**             |
-
 |----------|---------------------------------------------------------|-------------------|------------------------------|-----------------------|------------------------------------------|
 | RNF-01 | Tiempo de respuesta del servidor < 200 ms para CRUD de posts. | Rendimiento   | Latencia HTTP        | < 200 ms       | Medir con pruebas de carga.       |
 | RNF-02 | Soportar al menos 1 000 usuarios concurrentes.    | Escalabilidad  | Usuarios concurrentes    | ≥ 1 000       | Autoescalado en la nube.        |
@@ -47,8 +46,6 @@ La aplicación contará con control de versiones para borradores, publicación i
 ---
 
 ## 5. Diagrama de Casos de Uso 
-
-
 
 ```mermaid
 
@@ -82,8 +79,6 @@ flowchart LR
  A --> C6
 
 ```
-
-
 
 ---
 
