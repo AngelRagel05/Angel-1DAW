@@ -20,7 +20,6 @@ La aplicación contará con control de versiones para borradores, publicación i
 ## 3. Requisitos Funcionales 
 
 | **ID** | **Descripción**                        | **Prioridad** | **Fuente**     | **Estado**  |
-
 |---------|----------------------------------------------------------------|---------------|---------------------|---------------|
 | RF-01 | El usuario puede registrarse e iniciar sesión.        | Alta     | Stakeholder    | Aprobado   |
 | RF-02 | El usuario puede crear un nuevo post con título, cuerpo y etiquetas. | Alta   | Cliente      | Aprobado   |
