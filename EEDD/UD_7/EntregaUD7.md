@@ -61,3 +61,55 @@ Desarrollar una plataforma web donde los usuarios puedan registrarse e iniciar s
 | RNF-08  | Registro de auditorías accesible y no modificable.                   | Seguridad         | Integridad de logs           | 100 % integridad     | Garantía de no repudio.                      |
 | RNF-09  | Escaneo rápido y eficiente de códigos de barras y RFID.              | Rendimiento       | Tiempo de escaneo            | ≤ 0,5 s por artículo | Optimización del hardware y software.       |
 | RNF-10  | Exportación de reportes en formatos CSV y PDF.                       | Usabilidad        | Formatos compatibles         | CSV, PDF             | Compatibilidad con herramientas estándar.   |
+
+
+## 5. Diagrama de Casos de Uso
+
+```mermaid
+flowchart LR
+
+ %% Actores
+ AP(("👤 Administrador de Plataforma"))
+ GA(("🏬 Gestor de Almacén"))
+ OI(("📦 Operario de Inventario"))
+ AL(("📊 Analista de Logística"))
+
+ %% Sistema
+
+ subgraph "Sistema de Gestión de Almacenes"
+
+  C1(("Registrar productos"))
+  C2(("Gestionar almacenes y ubicaciones"))
+  C3(("Controlar inventario"))
+  C4(("Ajustar inventario"))
+  C5(("Crear y gestionar órdenes de salida"))
+  C6(("Generar listados de picking"))
+  C7(("Confirmar preparación y envío"))
+  C8(("Integrar con transportistas"))
+  C9(("Gestionar alertas y notificaciones"))
+  C10(("Ejecutar recuentos y validar discrepancias"))
+  C11(("Generar informes y dashboards"))
+  C12(("Gestionar usuarios, roles y permisos"))
+  C13(("Auditoría y seguridad"))
+
+ end
+
+ AP --> C1
+ AP --> C2
+ AP --> C12
+ AP --> C13
+
+ GA --> C3
+ GA --> C4
+ GA --> C5
+ GA --> C6
+ GA --> C7
+ GA --> C8
+ GA --> C9
+
+ OI --> C4
+ OI --> C10
+
+ AL --> C11
+
+```
