@@ -7,7 +7,6 @@
     <title>Formulario</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
 </head>
 
 <body class="container-sm container-md container-lg">
@@ -104,7 +103,7 @@
             </div>
 
             <!-- HOBBIES -->
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4" id="hobby">
                 <label for="Hobbies" class="form-label d-block">Hobbies *</label>
 
                 <div class="form-check">
@@ -173,28 +172,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         (() => {
-            const form = document.getElementById('formRegistro');
-
-            form.addEventListener('submit', e => {
-                // 1) Validación nativa de Bootstrap
-                if (!form.checkValidity()) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
-
-                // 2) Comprobamos que las contraseñas coincidan
-                const p1 = document.getElementById('password1');
-                const p2 = document.getElementById('password2');
-                p2.setCustomValidity(p1.value === p2.value ? '' : 'no-match');
-
-                // 3) Al menos un hobby
-                const anyHobby = form.querySelectorAll('input[name="hobbies"]:checked').length > 0;
-                document.getElementById('hobbyFeedback').style.display = anyHobby ? 'none' : 'block';
-                if (!anyHobby) { e.preventDefault(); e.stopPropagation(); }
-
-                form.classList.add('was-validated');
-            });
-        })();
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    const checkedHobbies = form.querySelectorAll('input[name="hobby"]:checked')
+                    if (checkedHobbies.length === 0) {
+                        event.preventDefault(); event.stopPropagation();
+                        form.querySelector('.invalid-feedback.d-block').classList.add('d-block')
+                    }
+                    if (!form.checkValidity()) { event.preventDefault(); event.stopPropagation(); }
+                    const pass1 = form.querySelector('#password1').value
+                    const pass2 = form.querySelector('#password2').value
+                    if (pass1 !== pass2) { event.preventDefault(); event.stopPropagation(); form.querySelector('#password2').classList.add('is-invalid') }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
     </script>
 </body>
 
